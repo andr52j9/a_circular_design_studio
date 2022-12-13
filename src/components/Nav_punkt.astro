@@ -1,0 +1,55 @@
+---
+const { punkt, href, underline } = Astro.props;
+---
+
+<a id="navpunkt" href={href} class={underline}>{punkt}</a>
+
+<style>
+  a {
+    color: var(--nav-a-color);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-family: var(--font-family-nav);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-m);
+    word-wrap: unset;
+    letter-spacing: var(--letter-spacing-nav);
+  }
+
+  a::after {
+    content: "";
+    display: block;
+    margin-top: var(--space-2xs);
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;
+  }
+
+  a:hover::after,
+  a.active-nav::after {
+    width: 100%;
+  }
+
+  a:hover {
+    color: var(--nav-a-color-hover);
+  }
+
+  a.blue:after {
+    background-color: var(--blue);
+  }
+  a.yellow:after {
+    background-color: var(--yellow);
+  }
+  a.red:after {
+    background-color: var(--red);
+  }
+  a.pink:after {
+    background-color: var(--pink);
+  }
+  a.green:after {
+    background-color: var(--green);
+  }
+</style>

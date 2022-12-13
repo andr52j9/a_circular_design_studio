@@ -1,0 +1,15 @@
+---
+const { underside, img } = Astro.props;
+---
+
+<div class="card_wrapper">
+  <img src={img} alt="" />
+  <div class="text_wrapper"><h5>{underside}</h5></div>
+</div>
+
+<style>
+  .card_wrapper {
+    max-width: 300px;
+    max-height: 440px;
+  }
+</style>

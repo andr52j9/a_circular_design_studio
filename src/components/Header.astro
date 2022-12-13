@@ -1,0 +1,30 @@
+---
+import NavPunkt from "./Nav_punkt.astro";
+import Kurv from "./Kurv.astro";
+---
+
+<header>
+  <div><img src="/logo.svg" alt="" /></div>
+  <nav>
+    <NavPunkt punkt="Til virksomheder" underline="yellow" href="#" />
+    <NavPunkt punkt="Om os" underline="green" href="#" />
+    <NavPunkt punkt="Kontakt" underline="red" href="#" />
+    <NavPunkt punkt="Shop" underline="blue" href="#" />
+    <Kurv />
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-xl) 3.75rem var(--space-m) 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-l);
+    align-items: center;
+  }
+</style>

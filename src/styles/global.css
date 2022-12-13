@@ -1,3 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headings);
+  color: var(--heading-color);
+  line-height: var(--line-height-heading);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-stretch: condensed;
+  margin-bottom: var(--space-m);
+  letter-spacing: var(--letter-spacing-heading);
+  text-transform: uppercase;
+}
+
 h2 {
-  color: blue;
+  font-size: var(--font-size-3xl);
+  font-stretch: condensed;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: var(--font-size-2xl);
+}
+h4 {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+}
+
+h5 {
+  font-size: var(--font-size-m);
+  font-stretch: condensed;
+  font-weight: var(--font-weight-bold);
+}
+h6 {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  font-size: var(--font-size-m);
+  font-family: var(--font-family-body);
+  color: var(--text-color-dark);
+  max-width: 65ch;
+  line-height: var(--line-height-text);
+}
+a {
+  font-size: var(--font-size-m);
+  font-family: var(--font-family-body);
+  text-decoration: none;
+}
+
+/* rotation animation */
+.rotation {
+  animation-name: rotate;
+  animation-duration: 75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  /* Gobal Color */
+  --color-pink-200: #fee0d3;
+  --color-pink-300: #fecbbd;
+  --color-pink-500: #fd9792;
+  --color-red-400: #ea7786;
+  --color-red-500: #dd4d6d;
+  --color-red-700: #be3862;
+  --color-green-400: #a3cabc;
+  --color-green-500: #7da89c;
+  --color-green-700: #3e7874;
+  --color-blue-400: #79bbe4;
+  --color-blue-500: #5894c4;
+  --color-blue-700: #3c70a4;
+  --color-yellow-400: #f8dea3;
+  --color-yellow-500: #d5b577;
+  --color-yellow-700: #b28e52;
+
+  --color-greyscale-100: #fff;
+  --color-greyscale-200: #e9e9e9;
+  --color-greyscale-300: #bdbdbd;
+  --color-greyscale-400: #7c7c7c;
+  --color-greyscale-500: #616161;
+  --color-greyscale-600: #444444;
+  --color-greyscale-700: #201b1c;
+
+  /* Color Alias */
+  --pink-light: var(--color-pink-200);
+  --pink: var(--color-pink-300);
+  --pink-dark: var(--color-pink-500);
+  --red-light: var(--color-red-400);
+  --red: var(--color-red-500);
+  --red-dark: var(--color-red-700);
+  --blue-light: var(--color-blue-400);
+  --blue: var(--color-blue-500);
+  --blue-dark: var(--color-blue-700);
+  --green-light: var(--color-green-400);
+  --green: var(--color-green-500);
+  --green-dark: var(--color-green-700);
+  --yellow-light: var(--color-yellow-400);
+  --yellow: var(--color-yellow-500);
+  --yellow-dark: var(--color-yellow-700);
+  --bg-color: var(--color-greyscale-100);
+  --heading-color: var(--color-greyscale-700);
+  --text-color-dark: var(--color-greyscale-600);
+  --text-color-medium: var(--color-greyscale-500);
+  --text-color-light: var(--color-greyscale-400);
+  --nav-a-color: var(--color-greyscale-500);
+  --nav-a-color-hover: var(--color-greyscale-700);
+  --kurv-color: var(--color-greyscale-500);
+  --kurv-color-hover: var(--color-greyscale-600);
+
+  /* Spacing */
+  --space-3xs: clamp(0.25rem, calc(0.25rem + 0vw), 0.25rem);
+  --space-2xs: clamp(0.44rem, calc(0.42rem + 0.11vw), 0.5rem);
+  --space-xs: clamp(0.69rem, calc(0.67rem + 0.11vw), 0.75rem);
+  --space-s: clamp(0.88rem, calc(0.83rem + 0.22vw), 1rem);
+  --space-m: clamp(1.31rem, calc(1.25rem + 0.33vw), 1.5rem);
+  --space-l: clamp(1.75rem, calc(1.66rem + 0.43vw), 2rem);
+  --space-xl: clamp(2.63rem, calc(2.49rem + 0.65vw), 3rem);
+  --space-2xl: clamp(3.5rem, calc(3.33rem + 0.87vw), 4rem);
+  --space-3xl: clamp(5.25rem, calc(4.99rem + 1.3vw), 6rem);
+
+  /* font family */
+  --font-family-body: "Poppins", Helvetica, sans-serif;
+  --font-family-headings: "Helvetica Neue", serif;
+  --font-family-nav: "Helvetica Neue", serif;
+
+  /* Global font size */
+  --step--2: clamp(0.61rem, calc(0.6rem + 0.06vw), 0.64rem);
+  --step--1: clamp(0.73rem, calc(0.7rem + 0.12vw), 0.8rem);
+  --step-0: clamp(0.88rem, calc(0.83rem + 0.22vw), 1rem);
+  --step-1: clamp(1.05rem, calc(0.98rem + 0.35vw), 1.25rem);
+  --step-2: clamp(1.26rem, calc(1.15rem + 0.53vw), 1.56rem);
+  --step-3: clamp(1.51rem, calc(1.36rem + 0.77vw), 1.95rem);
+  --step-4: clamp(1.81rem, calc(1.6rem + 1.09vw), 2.44rem);
+  --step-5: clamp(2.18rem, calc(1.87rem + 1.52vw), 3.05rem);
+  --step-6: clamp(2.61rem, calc(2.19rem + 2.09vw), 3.82rem);
+  /* font size   */
+
+  --font-size-4xl: var(--step-6);
+  --font-size-3xl: var(--step-5);
+  --font-size-2xl: var(--step-4);
+  --font-size-xl: var(--step-3);
+  --font-size-l: var(--step-2);
+  --font-size-m: var(--step-1);
+  --font-size-s: var(--step-0);
+  --font-size-xs: var(--step--1);
+  --font-size-2xs: var(--step--2);
+
+  /* font-weight | gobal */
+  --font-weight-thin: 100;
+  --font-weight-exlight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-exbold: 800;
+  --font-weight-black: 900;
+
+  /* letter spacing */
+  --letter-spacing-dense: -1px;
+  --letter-spacing-heading: 0.75px;
+  --letter-spacing-nav: 1px;
+  --letter-spacing-double: 2px;
+
+  /* line height */
+  --line-height-heading: 1.25;
+  --line-height-reset: 1;
+  --line-height-text: 1.5;
+
+  /* Streg retning */
 }

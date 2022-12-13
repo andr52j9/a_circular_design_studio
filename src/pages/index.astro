@@ -1,8 +1,73 @@
 ---
+import Cirkel from "../components/Cirkel.astro";
 import Layout from "../layouts/Layout.astro";
+import Streg from "../components/Streg.astro";
 const { title } = Astro.props;
 ---
 
-<Layout title="forside">
-  <h1>A Circurlar Design Studio</h1>
+<Layout title="Forside | A Circurlar Design Studio">
+  <section class="section-grid">
+    <div class="splash_text">
+      <h1>Plastiksnedkeri i 100% genanvendt plast</h1>
+      <p>
+        A Circular Design Studio er et utraditionelt plastiksnedkeri, der skaber
+        interiør, installationer og kunstværker, i 100% genanvendt plast,
+        indsamlet fra husholdninger, naturen eller virksomheder i Danmark.
+      </p>
+    </div>
+    <Cirkel />
+  </section>
+
+  <section class="section2 section-grid">
+    <h2>Hvad tilbyder vi</h2>
+    <div class="streg_wrapper"><Streg fill="var(--yellow-light)" /></div>
+
+    <p>
+      Vores store passion er cirkulær økonomi, og vi tilbyder derfor flere
+      ydelser indenfor området. Udover vores populære produkter i genanvendt
+      plast og kunstværker, tilbyder vi også kreative undervisningsforløb for
+      institutioner, workshops for private og virksomheder og konsulentopgaver.
+    </p>
+  </section>
 </Layout>
+
+<style>
+  :root {
+    --grid-gutter: var(
+      --space-s-s,
+      clamp(0.88rem, calc(0.56rem + 1.31vw), 1.56rem)
+    );
+    --grid-max-width: 76.56rem;
+    --grid-columns: 12;
+  }
+  .splash_text {
+    grid-column: span 9;
+    align-self: center;
+  }
+  .section-grid {
+    margin: auto;
+    padding: 1.5rem;
+    column-gap: var(--grid-gutter);
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(20px, 80px));
+    max-width: var(--grid-max-width);
+  }
+
+  h2 {
+    grid-column: span 8;
+  }
+
+  .section2 p {
+    grid-column: span 6;
+    grid-row: 3;
+  }
+
+  .streg_wrapper {
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    overflow: hidden;
+    margin-bottom: var(--space-l);
+  }
+</style>
