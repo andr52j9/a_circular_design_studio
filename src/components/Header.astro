@@ -6,36 +6,62 @@ import Kurv from "./Kurv.astro";
 <header>
   <div><img src="/logo.svg" alt="" /></div>
   <nav>
-    <NavPunkt
-      punkt="Til virksomheder"
-      underline="yellow"
-      href="#"
-      dropdown={true}
-    />
-    <NavPunkt
-      punkt="Om os"
-      underline="green"
-      href="componentsite"
-      dropdown={true}
-    />
+    <div class="dropdown">
+      <NavPunkt
+        punkt="Til virksomheder"
+        underline="yellow"
+        href="#"
+        dropdown={true}
+      />
+      <div class="dropdown_content">
+        <NavPunkt
+          punkt="Workshop"
+          underline="red"
+          href="workshop"
+          dropdown={false}
+        />
+        <NavPunkt
+          punkt="Rådgivning"
+          underline="blueLight"
+          href="raadgivning"
+          dropdown={false}
+        />
+
+        <NavPunkt
+          punkt="Projekter"
+          underline="greenDark"
+          href="projekter"
+          dropdown={false}
+        />
+      </div>
+    </div>
+
+    <div>
+      <NavPunkt
+        punkt="Om os"
+        underline="green"
+        href="componentsite"
+        dropdown={true}
+      />
+    </div>
     <NavPunkt punkt="Kontakt" underline="red" href="#" dropdown={false} />
     <NavPunkt punkt="Shop" underline="blue" href="#" dropdown={true} />
 
     <Kurv />
   </nav>
+
+  <style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-xl) 3.75rem var(--space-m) 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-l);
+      align-items: center;
+    }
+  </style>
 </header>
-
-<style>
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--space-xl) 3.75rem var(--space-m) 0;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--space-l);
-    align-items: center;
-  }
-</style>

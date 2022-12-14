@@ -138,7 +138,8 @@ a {
   --space-l: clamp(1.75rem, calc(1.66rem + 0.43vw), 2rem);
   --space-xl: clamp(2.63rem, calc(2.49rem + 0.65vw), 3rem);
   --space-2xl: clamp(3.5rem, calc(3.33rem + 0.87vw), 4rem);
-  --space-3xl: clamp(5.25rem, calc(4.99rem + 1.3vw), 6rem);
+  --space-3xl: clamp(4.38rem, calc(4.23rem + 0.71vw), 5rem);
+  --space-4xl: clamp(5.25rem, calc(5.08rem + 0.85vw), 6rem);
 
   /* font family */
   --font-family-body: "Poppins", Helvetica, sans-serif;
