@@ -5,9 +5,15 @@ import BurgermenuIcon from "./burgermenuIcon.astro";
 ---
 
 <header>
-  <div><img src="/logo.svg" alt="" /></div>
-  <div class="burgermenuicon">
-    <BurgermenuIcon />
+  <div class="nav_content">
+    <div><img src="/logo.svg" alt="" /></div>
+
+    <div class="kurvIcon">
+      <Kurv />
+    </div>
+    <div class="burgermenuicon">
+      <BurgermenuIcon />
+    </div>
   </div>
   <nav>
     <div class="dropdown">
@@ -96,20 +102,26 @@ import BurgermenuIcon from "./burgermenuIcon.astro";
         />
       </div>
     </div>
-
-    <Kurv />
   </nav>
 </header>
 
 <style>
   header {
     display: flex;
-    justify-content: space-between;
-    padding: var(--space-xl) 3.75rem var(--space-m) 0;
+    height: fit-content;
+    padding: var(--space-xl) var(--space-2xs) var(--space-m) 0;
+  }
+
+  .nav_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
   }
 
   nav {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: var(--space-l);
     align-items: flex-start;
@@ -142,7 +154,6 @@ import BurgermenuIcon from "./burgermenuIcon.astro";
       padding: var(--space-xl) 3.75rem var(--space-m) 0;
     }
     nav {
-      display: flex;
       justify-content: space-between;
       gap: var(--space-l);
       align-items: flex-start;
@@ -150,6 +161,10 @@ import BurgermenuIcon from "./burgermenuIcon.astro";
 
     .burgermenuicon {
       display: none;
+    }
+
+    .kurvIcon {
+      order: 2;
     }
   }
 </style>
