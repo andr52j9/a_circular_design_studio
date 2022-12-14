@@ -20,7 +20,7 @@ const { tekst, variant } = Astro.props;
   [data-variant="primaryButton"] {
     color: var(--bg-color);
     background-color: var(--pink-dark);
-    padding: var(--space-3xl);
+    padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: 3px;
@@ -30,7 +30,7 @@ const { tekst, variant } = Astro.props;
   [data-variant="primaryButton"]:hover {
     color: var(--pink-dark);
     background-color: var(--bg-color);
-    padding: var(--space-3xl);
+    padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: var(--border-radius-default);
@@ -41,7 +41,7 @@ const { tekst, variant } = Astro.props;
   [data-variant="secondaryButton"] {
     color: var(--bg-color);
     background-color: var(--blue-dark);
-    padding: var(--space-3xl);
+    padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: 3px;
@@ -51,7 +51,7 @@ const { tekst, variant } = Astro.props;
   [data-variant="secondaryButton"]:hover {
     color: var(--blue-dark);
     background-color: var(--bg-color);
-    padding: var(--space-3xl);
+    padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: var(--border-radius-default);
@@ -63,7 +63,7 @@ const { tekst, variant } = Astro.props;
   [data-variant="lag_i_kurvButton"] {
     color: var(--bg-color);
     background-color: var(--blue-light);
-    padding: var(--space-3xl);
+    padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: 3px;
@@ -73,7 +73,7 @@ const { tekst, variant } = Astro.props;
   [data-variant="lag_i_kurvButton"]:hover {
     color: var(--bg-color);
     background-color: var(--blue-dark);
-    padding: var(--space-3xl);
+    padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: 3px;
@@ -89,5 +89,16 @@ const { tekst, variant } = Astro.props;
     padding-top: var(--space-xs);
     border-radius: var(--border-radius-default);
     border: var(--pink-light) var(--border-l);
+  }
+
+  /* GavekortButton */
+  [data-variant="GavekortButton"] {
+    color: var(--green);
+    background-color: var(--bg-color);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-2xs);
+    padding-top: var(--space-2xs);
+    border-radius: 3px;
+    border: var(--green) var(--border-l);
   }
 </style>
