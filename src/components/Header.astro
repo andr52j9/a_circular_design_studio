@@ -63,10 +63,33 @@ import Kurv from "./Kurv.astro";
       gap: var(--space-l);
       align-items: center;
     }
+    .dropdown {
+      background-color: var(--bg-color);
 
-    .dropdown_content {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: var(--space-m);
+      height: fit-content;
+    }
+    .dropdown_content {
+      display: none;
+    }
+
+    .dropdown:hover .dropdown_content {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      gap: var(--space-s);
+    }
+
+    @media (min-width: 810px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--space-xl) 3.75rem var(--space-m) 0;
+      }
     }
   </style>
 </header>
