@@ -2,8 +2,8 @@
 const { underside, img, farve } = Astro.props;
 ---
 
-<a href={underside}
-  ><div class="card_wrapper">
+<a href={underside}>
+  <div class="card_wrapper">
     <img src={img} alt={underside} />
     <div class={`text_wrapper ${farve}`}><h4>{underside}</h4></div>
   </div>
@@ -13,14 +13,16 @@ const { underside, img, farve } = Astro.props;
     display: flex;
     align-items: flex-end;
     position: relative;
-    max-width: 300px;
-    max-height: 440px;
-    object-fit: cover;
+    width: fit-content;
+  }
+
+  .card_wrapper img {
+    width: 300px;
+    height: 440px;
   }
   .text_wrapper {
     right: 0%;
     position: absolute;
-    z-index: 2;
     width: 257px;
     height: 62px;
     display: flex;
@@ -34,9 +36,9 @@ const { underside, img, farve } = Astro.props;
     color: var(--white);
   }
 
-  .text_wrapper:hover {
-    width: ;
-    height: 62px;
+  .card_wrapper:hover .text_wrapper {
+    width: 300px;
+    height: 440px;
   }
 
   .blue {
