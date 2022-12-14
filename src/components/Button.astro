@@ -5,37 +5,56 @@ const { tekst, variant } = Astro.props;
 <button data-variant={variant}><h4>{tekst}</h4></button>
 
 <style>
+  /* generelt knap */
+
   button h4 {
     color: var(--bg-color);
   }
 
-  button {
+  button :hover h4 {
+    color: var(--pink-dark);
+  }
+
+  /* lyserød knap */
+
+  [data-variant="primary"] {
+    color: var(--bg-color);
     background-color: var(--pink-dark);
     padding: var(--space-3xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: 3px;
-    border: none;
+    border: var(--pink-dark) var(--border-l);
   }
 
-  button h4:hover {
+  [data-variant="primary"]:hover {
     color: var(--pink-dark);
-  }
-  button:hover {
     background-color: var(--bg-color);
     padding: var(--space-3xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
-    border-radius: 3px;
-    border: var(--pink-dark);
+    border-radius: var(--border-radius-default);
+    border: var(--pink-dark) var(--border-l);
   }
 
-  [data-variant="primary"] button {
-    background-color: var(--beige-300);
-    color: var(--beige-700);
+  /* blå knap */
+  [data-variant="secondary"] {
+    color: var(--bg-color);
+    background-color: var(--blue-dark);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: 3px;
+    border: var(--blue-dark) var(--border-l);
   }
-  [data-variant="primary"]:hover {
-    background-color: var(--beige-300);
-    color: var(--beige-700);
+
+  [data-variant="secondary"]:hover {
+    color: var(--pink-dark);
+    background-color: var(--bg-color);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: var(--border-radius-default);
+    border: var(--blue-dark) var(--border-l);
   }
 </style>
