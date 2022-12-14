@@ -32,6 +32,18 @@ const { tekst, variant } = Astro.props;
 
   [data-variant="secondaryForms"] {
     color: var(--kurv-color);
+    height: 163px;
+    width: 520px;
+    border: var(--kurv-color) var(--border-xs);
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+    font-size: var(--step-0);
+  }
+
+  [data-variant="secondaryForms"]:focus {
+    color: var(--kurv-color);
+    height: 163px;
     width: 520px;
     border: var(--text-color-dark) var(--border-l);
     padding: var(--space-xs);
