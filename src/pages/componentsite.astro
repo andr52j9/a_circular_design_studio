@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import UndersideCard from "../components/UndersideCard.astro";
 import WebshopCard from "../components/WebshopCard.astro";
 import NavDropdownMenu from "../components/NavDropdownMenu.astro";
+import Input from "../components/Input.astro";
 ---
 
 <Layout title="Komponenter | A Circurlar Design Studio">
@@ -25,7 +26,7 @@ import NavDropdownMenu from "../components/NavDropdownMenu.astro";
   <UndersideCard farve="blue" img="/img/workshop.webp" underside="workshop" />
   <Button variant="primaryButton" tekst="Knap" />
   <Button variant="secondaryButton" tekst="Knap" />
-  <Button variant="lag_i_kurvButton" tekst="Læg i kurv" />
+  <Button variant="LagIKurvButton" tekst="Læg i kurv" />
   <Button variant="webshopCardButton" tekst="Læg i kurv" />
   <Button variant="GavekortButton" tekst="En anden" />
   <WebshopCard
@@ -33,4 +34,5 @@ import NavDropdownMenu from "../components/NavDropdownMenu.astro";
     pris="pris fra kr 1.895,00"
     img="/img/lampe.webp"
   />
+  <Input />
 </Layout>
