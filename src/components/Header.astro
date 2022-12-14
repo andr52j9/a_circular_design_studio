@@ -5,17 +5,17 @@ import BurgermenuIcon from "./burgermenuIcon.astro";
 ---
 
 <header>
-  <div class="nav_content">
+  <nav class="">
     <div><img src="/logo.svg" alt="" /></div>
 
     <div class="kurvIcon">
       <Kurv />
     </div>
-    <div class="burgermenuicon">
+    <div class="burgermenuIcon">
       <BurgermenuIcon />
     </div>
-  </div>
-  <nav>
+  </nav>
+  <div class="nav_content hide">
     <div class="dropdown">
       <NavPunkt
         punkt="Til virksomheder"
@@ -102,29 +102,54 @@ import BurgermenuIcon from "./burgermenuIcon.astro";
         />
       </div>
     </div>
-  </nav>
+  </div>
 </header>
+
+<script>
+  document
+    .querySelector(".burgermenuIcon")
+    .addEventListener("click", showBurgerContent);
+  function showBurgerContent() {
+    console.log("hejhejhej");
+    document.querySelector(".nav_content").classList.toggle("hide");
+  }
+</script>
 
 <style>
   header {
     display: flex;
+    flex-wrap: wrap;
     height: fit-content;
-    padding: var(--space-xl) var(--space-2xs) var(--space-m) 0;
+    padding: var(--space-xl) var(--space-m) var(--space-m) 0;
   }
 
   .nav_content {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: var(--space-3xl);
+    gap: var(--space-l);
     height: 100vh;
+    width: 100%;
+  }
+
+  .nav_content a {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .hide {
+    display: none;
   }
 
   nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    gap: var(--space-l);
-    align-items: flex-start;
+
+    align-items: center;
+    width: 100%;
   }
   .dropdown {
     background-color: var(--bg-color);
@@ -157,6 +182,12 @@ import BurgermenuIcon from "./burgermenuIcon.astro";
       justify-content: space-between;
       gap: var(--space-l);
       align-items: flex-start;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: var(--space-m);
+      align-items: flex-end;
     }
 
     .burgermenuicon {
