@@ -101,4 +101,23 @@ const { tekst, variant } = Astro.props;
     border-radius: 3px;
     border: var(--green) var(--border-l);
   }
+  [data-variant="GavekortButton"]:hover {
+    color: var(--green);
+    background-color: var(--bg-color);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-2xs);
+    padding-top: var(--space-2xs);
+    border-radius: 3px;
+    border: var(--green) var(--border-l);
+  }
+
+  [data-variant="GavekortButton"]:focus {
+    color: var(--bg-color);
+    background-color: var(--green);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-2xs);
+    padding-top: var(--space-2xs);
+    border-radius: 3px;
+    border: var(--green) var(--border-l);
+  }
 </style>
