@@ -1,5 +1,5 @@
 ---
-const { img, produktnavn, pris } = Astro.props;
+const { img, produktnavn, prisfra, pris } = Astro.props;
 import Button from "./Button.astro";
 ---
 <div class="wrapper">
@@ -7,23 +7,24 @@ import Button from "./Button.astro";
     <div class="container">
     <img src={img} alt={produktnavn}>
     <div class="overlay"></div>
-    <Button variant = "primaryButton" />
+    <div class="btn"><Button variant = "webshopCardButton" /></div>
 </div>
     <div class="text_wrapper">
     <h3 class="produktnavn">{produktnavn}</h3>
-    <h5 class="pris">{pris}</h5>
+    <div class="pris">
+    <h6>{prisfra}</h6>
+    <h5 >{pris}</h5>
+</div>
 </div>
 </article>
 
-<!-- <button Button-variant={variant}><h4>{tekst}</h4></button> -->
-
-<div class="card_wrapper">
+<!-- <div class="card_wrapper">
     <img src={img} alt={produktnavn}>
     <div class="text_wrapper">
     <h3 class="produktnavn">{produktnavn}</h3>
     <h5 class="pris">{pris}</h5>
 </div>
-</div>
+</div> -->
 </div>
 
 
@@ -33,10 +34,26 @@ import Button from "./Button.astro";
     gap: 190px;
 }
 
+
+
    img {
     max-width: 450px;
     max-height: 645px;
    }
+
+   .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .container:hover .btn{display: block;}
+
+.btn {
+    position: absolute;
+    display: none;
+}
 
    img:hover {
    opacity: 50%;
@@ -50,8 +67,10 @@ import Button from "./Button.astro";
    }
 
    .pris{
+    display: flex;
     padding-top: var(--space-m);
     place-self: end;
+    gap: var(--space-2xs);
    }
 
    .produktnavn {
