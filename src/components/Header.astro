@@ -1,12 +1,15 @@
 ---
 import NavPunkt from "./Nav_punkt.astro";
 import Kurv from "./Kurv.astro";
+import BurgermenuIcon from "./burgermenuIcon.astro";
 ---
 
 <header>
   <div><img src="/logo.svg" alt="" /></div>
+  <div class="burgermenuicon">
+    <BurgermenuIcon />
+  </div>
   <nav>
-    <div></div>
     <div class="dropdown">
       <NavPunkt
         punkt="Til virksomheder"
@@ -37,66 +40,116 @@ import Kurv from "./Kurv.astro";
       </div>
     </div>
 
-    <div>
+    <div class="dropdown">
       <NavPunkt
         punkt="Om os"
         underline="green"
         href="componentsite"
         dropdown={true}
       />
+      <div class="dropdown_content">
+        <NavPunkt
+          punkt="Workshop"
+          underline="red"
+          href="workshop"
+          dropdown={false}
+        />
+        <NavPunkt
+          punkt="Rådgivning"
+          underline="blueLight"
+          href="raadgivning"
+          dropdown={false}
+        />
+
+        <NavPunkt
+          punkt="Projekter"
+          underline="greenDark"
+          href="projekter"
+          dropdown={false}
+        />
+      </div>
     </div>
+
     <NavPunkt punkt="Kontakt" underline="red" href="#" dropdown={false} />
-    <NavPunkt punkt="Shop" underline="blue" href="#" dropdown={true} />
+
+    <div class="dropdown">
+      <NavPunkt punkt="Shop" underline="blue" href="#" dropdown={true} />
+      <div class="dropdown_content">
+        <NavPunkt
+          punkt="Workshop"
+          underline="red"
+          href="workshop"
+          dropdown={false}
+        />
+        <NavPunkt
+          punkt="Rådgivning"
+          underline="blueLight"
+          href="raadgivning"
+          dropdown={false}
+        />
+
+        <NavPunkt
+          punkt="Projekter"
+          underline="greenDark"
+          href="projekter"
+          dropdown={false}
+        />
+      </div>
+    </div>
 
     <Kurv />
   </nav>
+</header>
 
-  <style>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-xl) 3.75rem var(--space-m) 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-l);
+    align-items: flex-start;
+  }
+  .dropdown {
+    background-color: var(--bg-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: var(--space-m);
+    height: fit-content;
+  }
+  .dropdown_content {
+    display: none;
+  }
+
+  .dropdown:hover .dropdown_content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: var(--space-s);
+  }
+
+  @media (min-width: 810px) {
     header {
       display: flex;
       justify-content: space-between;
       padding: var(--space-xl) 3.75rem var(--space-m) 0;
     }
-
     nav {
       display: flex;
       justify-content: space-between;
       gap: var(--space-l);
       align-items: flex-start;
     }
-    .dropdown {
-      background-color: var(--bg-color);
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-      gap: var(--space-m);
-      height: fit-content;
-    }
-    .dropdown_content {
+    .burgermenuicon {
       display: none;
     }
-
-    .dropdown:hover .dropdown_content {
-      display: flex;
-      flex-direction: column;
-      align-self: flex-end;
-      gap: var(--space-s);
-    }
-
-    @media (min-width: 810px) {
-      header {
-        display: flex;
-        justify-content: space-between;
-        padding: var(--space-xl) 3.75rem var(--space-m) 0;
-      }
-      nav {
-        display: flex;
-        justify-content: space-between;
-        gap: var(--space-l);
-        align-items: flex-start;
-      }
-    }
-  </style>
-</header>
+  }
+</style>
