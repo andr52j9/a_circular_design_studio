@@ -5,15 +5,27 @@ const { tekst, variant } = Astro.props;
 <div>
   <form>
     <label for="fname">First name:</label><br />
-    <input type="text" id="fname" name="fname" /><br />
-    <label for="lname">Last name:</label><br />
-    <input type="text" id="lname" name="lname" />
+    <input data-variant={variant} type="text" id="fname" name="fname" /><br />
   </form>
 </div>
 
 <style>
-  input {
+  [data-variant="primaryForms"] {
+    color: var(--kurv-color);
     width: 520px;
-    background-color: var(--pink-dark);
+    border: var(--kurv-color) var(--border-xs);
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+  }
+
+  [data-variant="primaryForms"]:focus {
+    color: var(--kurv-color);
+    width: 520px;
+    border: var(--text-color-dark) var(--border-l);
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+    outline: none;
   }
 </style>
