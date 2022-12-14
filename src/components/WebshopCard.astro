@@ -1,17 +1,21 @@
 ---
 const { img, produktnavn, pris } = Astro.props;
+import Button from "./Button.astro";
 ---
 <div class="wrapper">
 <article class="card_wrapper">
     <div class="container">
     <img src={img} alt={produktnavn}>
     <div class="overlay"></div>
+    <Button variant = "primaryButton" />
 </div>
     <div class="text_wrapper">
     <h3 class="produktnavn">{produktnavn}</h3>
     <h5 class="pris">{pris}</h5>
 </div>
 </article>
+
+<!-- <button Button-variant={variant}><h4>{tekst}</h4></button> -->
 
 <div class="card_wrapper">
     <img src={img} alt={produktnavn}>
