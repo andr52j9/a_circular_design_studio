@@ -1,16 +1,17 @@
 ---
 const { img, icon } = Astro.props;
 ---
-
+<div class="wrapper">
     <article class="card_wrapper">
+        <div class="container">
         <img src={img} alt="instagram billede">
         <div class="overlay"></div>
         <div class="icon"><a href="https://www.instagram.com/acirculardesignstudio/"
             ><svg
-              width="27"
-              height="28"
+              width="119"
+              height="119"
               viewBox="0 0 27 28"
-              fill="none"
+              fill="white"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -19,53 +20,39 @@ const { img, icon } = Astro.props;
             </svg>
           </a>
     </div>
+</div>
     </article>
+</div>
 
     <style>
-    .wrapper {
-        display: flex;
-    }
-    
        img {
-        max-width: 450px;
-        max-height: 645px;
+        max-width: 320px;
+        max-height: 460px;
        }
-    
+
+       .wrapper {
+    display: flex;
+}
+
        .container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-       }
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
     
-       .container:hover .btn {
+       .container:hover .icon {
         display: block;
     }
-    
-    .btn {
-        position: absolute;
-        display: none;
-    }
-    
-       img:hover {
+
+    img:hover {
        opacity: 50%;
        background-color: var(--color-greyscale-400:);
     }
     
-       .text_wrapper {
-        display: grid;
-        max-width: 450px;
-        max-height: 645px;
-       }
+    .icon {
+        position: absolute;
+        display: none;
+    }
     
-       .pris{
-        display: flex;
-        padding-top: var(--space-m);
-        place-self: end;
-        gap: var(--space-2xs);
-       }
-    
-       .produktnavn {
-        padding-top: var(--space-m);
-       }
     </style>
