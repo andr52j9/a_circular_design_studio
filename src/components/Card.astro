@@ -1,15 +1,23 @@
 ---
-const { underside, img } = Astro.props;
+const { underside, img, farve } = Astro.props;
 ---
 
 <div class="card_wrapper">
-  <img src={img} alt="" />
-  <div class="text_wrapper"><h5>{underside}</h5></div>
+  <img src={img} alt={underside} />
+  <div class={(farve, "text_wrapper")}><h5>{underside}</h5></div>
 </div>
-
 <style>
   .card_wrapper {
     max-width: 300px;
     max-height: 440px;
+  }
+  .text_wrapper {
+    position: relative;
+    z-index: 2;
+    width: 257px;
+    height: 62px;
+  }
+  .blue {
+    background-color: var(--blue);
   }
 </style>
