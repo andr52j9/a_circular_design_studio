@@ -4,7 +4,7 @@ const { tekst, variant } = Astro.props;
 
 <div>
   <form>
-    <label for="fname">First name:</label><br />
+    <label for="fname"> <h6>First name:</h6></label><br />
     <input data-variant={variant} type="text" id="fname" name="fname" /><br />
   </form>
 </div>
@@ -17,6 +17,7 @@ const { tekst, variant } = Astro.props;
     padding: var(--space-xs);
     padding-bottom: var(--space-s);
     padding-top: var(--space-s);
+    font-size: var(--step-0);
   }
 
   [data-variant="primaryForms"]:focus {
