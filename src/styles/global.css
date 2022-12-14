@@ -190,4 +190,13 @@ a {
   --line-height-text: 1.5;
 
   /* Streg retning */
+
+  /* border radius */
+  --border-radius-default: 2px;
+
+  /* border style */
+  --border-xs: solid 0.5px;
+  --border-s: solid 1px;
+  --border-m: solid 1.5px;
+  --border-l: solid 2px;
 }

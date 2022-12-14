@@ -15,10 +15,10 @@ const { tekst, variant } = Astro.props;
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: 3px;
-    border: none;
+    border: var(--pink-dark) var(--border-l);
   }
 
-  button h4:hover {
+  button:hover h4 {
     color: var(--pink-dark);
   }
   button:hover {
@@ -26,8 +26,8 @@ const { tekst, variant } = Astro.props;
     padding: var(--space-3xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
-    border-radius: 3px;
-    border: var(--pink-dark);
+    border-radius: var(--border-radius-default);
+    border: var(--pink-dark) var(--border-l);
   }
 
   [data-variant="primary"] button {
