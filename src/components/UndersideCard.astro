@@ -4,7 +4,7 @@ const { underside, img, farve } = Astro.props;
 
 <div class="card_wrapper">
   <img src={img} alt={underside} />
-  <div class={(farve, "text_wrapper")}><h5>{underside}</h5></div>
+  <div class={`text_wrapper ${farve}`}><h5>{underside}</h5></div>
 </div>
 <style>
   .card_wrapper {
