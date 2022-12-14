@@ -1,8 +1,8 @@
 ---
-const { underside, img, farve } = Astro.props;
+const { underside, img, farve, link } = Astro.props;
 ---
 
-<a href={underside}>
+<a href={link}>
   <div class="card_wrapper">
     <img src={img} alt={underside} />
     <div class={`text_wrapper ${farve}`}><h4>{underside}</h4></div>
@@ -43,5 +43,13 @@ const { underside, img, farve } = Astro.props;
 
   .blue {
     background-color: var(--blue);
+  }
+
+  .pink {
+    background-color: var(--pink-dark);
+  }
+
+  .green {
+    background-color: var(--green-dark);
   }
 </style>
