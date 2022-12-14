@@ -6,10 +6,14 @@ import WebshopCard from "../components/WebshopCard.astro";
 import NavDropdownMenu from "../components/NavDropdownMenu.astro";
 import Forms from "../components/Forms.astro";
 import InstaCard from "../components/InstaCard.astro";
+import Dropdown from "../components/Dropdown.astro";
 ---
 
 <Layout title="Komponenter | A Circurlar Design Studio">
+  <Dropdown />
   <Forms variant="primaryForms" tekst="Knap" />
+  <Forms variant="secondaryForms" tekst="Knap" />
+
   <NavDropdownMenu variant="virksomheder" />
   <UndersideCard
     farve="blue"
