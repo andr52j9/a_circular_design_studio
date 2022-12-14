@@ -1,0 +1,44 @@
+---
+import NavPunkt from "./Nav_punkt.astro";
+
+---
+
+<div class="dropdown">
+  <NavPunkt punkt="Workshop" underline="red" href="workshop" dropdown={false} />
+  <NavPunkt
+    punkt="Rådgivning"
+    underline="blueLight"
+    href="raadgivning"
+    dropdown={false}
+  />
+
+  <NavPunkt
+    punkt="Projekter"
+    underline="greenDark"
+    href="projekter"
+    dropdown={false}
+  />
+</div>
+
+<div class="dropdown">
+  {
+    dropdown == true && (
+     <NavPunkt punkt="Workshop" underline="red" href="workshop" dropdown={false} />
+  <NavPunkt
+    punkt="Rådgivning"
+    underline="blueLight"
+    href="raadgivning"
+    dropdown={false}
+  />
+
+  <NavPunkt
+    punkt="Projekter"
+    underline="greenDark"
+    href="projekter"
+    dropdown={false}
+  />
+
+    )
+  }
+  {dropdown == false && ""}
+</div>
