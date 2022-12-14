@@ -12,8 +12,21 @@ const { tekst, variant } = Astro.props;
 </div>
 
 <style>
-  input {
+  [data-variant="primaryForms"] {
+    color: var(--kurv-color);
     width: 520px;
-    background-color: var(--pink-dark);
+    border: var(--kurv-color) var(--border-xs);
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+  }
+
+  [data-variant="primaryForms"]:focus {
+    color: var(--kurv-color);
+    width: 520px;
+    border: var(--text-color-dark) var(--border-l);
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
   }
 </style>
