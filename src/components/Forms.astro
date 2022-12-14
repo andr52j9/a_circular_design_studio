@@ -5,9 +5,7 @@ const { tekst, variant } = Astro.props;
 <div>
   <form>
     <label for="fname">First name:</label><br />
-    <input type="text" id="fname" name="fname" /><br />
-    <label for="lname">Last name:</label><br />
-    <input type="text" id="lname" name="lname" />
+    <input data-variant={variant} type="text" id="fname" name="fname" /><br />
   </form>
 </div>
 
@@ -28,5 +26,6 @@ const { tekst, variant } = Astro.props;
     padding: var(--space-xs);
     padding-bottom: var(--space-s);
     padding-top: var(--space-s);
+    outline: none;
   }
 </style>
