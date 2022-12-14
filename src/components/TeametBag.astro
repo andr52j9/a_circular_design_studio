@@ -2,7 +2,7 @@
 const { img, navn, titel, beskrivelse, læsMere, mail } = Astro.props;
 ---
 
-<article>
+<article class="article_wrapper">
     <img src={img} alt="temaet bag">
     <div class="text_wrapper">
         <h3>{navn}</h3>
@@ -12,3 +12,15 @@ const { img, navn, titel, beskrivelse, læsMere, mail } = Astro.props;
         <a href={mail}></a>
     </div>
 </article>
+
+<style>
+
+    .article_wrapper {
+        display: flex;
+    }
+
+    img {
+    max-width: 550px;
+    max-height: 580px;
+    }
+</style>
