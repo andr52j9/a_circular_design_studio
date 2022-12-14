@@ -6,10 +6,21 @@ import Kurv from "./Kurv.astro";
 <header>
   <div><img src="/logo.svg" alt="" /></div>
   <nav>
-    <NavPunkt punkt="Til virksomheder" underline="yellow" href="#" />
-    <NavPunkt punkt="Om os" underline="green" href="componentsite" />
-    <NavPunkt punkt="Kontakt" underline="red" href="#" />
-    <NavPunkt punkt="Shop" underline="blue" href="#" />
+    <NavPunkt
+      punkt="Til virksomheder"
+      underline="yellow"
+      href="#"
+      dropdown={true}
+    />
+    <NavPunkt
+      punkt="Om os"
+      underline="green"
+      href="componentsite"
+      dropdown={true}
+    />
+    <NavPunkt punkt="Kontakt" underline="red" href="#" dropdown={false} />
+    <NavPunkt punkt="Shop" underline="blue" href="#" dropdown={true} />
+
     <Kurv />
   </nav>
 </header>
