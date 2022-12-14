@@ -1,5 +1,41 @@
 ---
-const {tekst} = Astro.props;
+const { tekst, variant } = Astro.props;
 ---
 
-<button>{tekst}</button>
+<button data-variant={variant}><h4>{tekst}</h4></button>
+
+<style>
+  button h4 {
+    color: var(--bg-color);
+  }
+
+  button {
+    background-color: var(--pink-dark);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: 3px;
+    border: none;
+  }
+
+  button h4:hover {
+    color: var(--pink-dark);
+  }
+  button:hover {
+    background-color: var(--bg-color);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: 3px;
+    border: var(--pink-dark);
+  }
+
+  [data-variant="primary"] button {
+    background-color: var(--beige-300);
+    color: var(--beige-700);
+  }
+  [data-variant="primary"]:hover {
+    background-color: var(--beige-300);
+    color: var(--beige-700);
+  }
+</style>
