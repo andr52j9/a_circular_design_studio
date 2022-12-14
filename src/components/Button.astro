@@ -17,7 +17,7 @@ const { tekst, variant } = Astro.props;
 
   /* lyserød knap */
 
-  [data-variant="primary"] {
+  [data-variant="primaryButton"] {
     color: var(--bg-color);
     background-color: var(--pink-dark);
     padding: var(--space-3xl);
@@ -27,7 +27,7 @@ const { tekst, variant } = Astro.props;
     border: var(--pink-dark) var(--border-l);
   }
 
-  [data-variant="primary"]:hover {
+  [data-variant="primaryButton"]:hover {
     color: var(--pink-dark);
     background-color: var(--bg-color);
     padding: var(--space-3xl);
@@ -38,7 +38,7 @@ const { tekst, variant } = Astro.props;
   }
 
   /* blå knap */
-  [data-variant="secondary"] {
+  [data-variant="secondaryButton"] {
     color: var(--bg-color);
     background-color: var(--blue-dark);
     padding: var(--space-3xl);
@@ -48,13 +48,46 @@ const { tekst, variant } = Astro.props;
     border: var(--blue-dark) var(--border-l);
   }
 
-  [data-variant="secondary"]:hover {
-    color: var(--pink-dark);
+  [data-variant="secondaryButton"]:hover {
+    color: var(--blue-dark);
     background-color: var(--bg-color);
     padding: var(--space-3xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: var(--border-radius-default);
     border: var(--blue-dark) var(--border-l);
+  }
+
+  /* læg i kurv */
+
+  [data-variant="lag_i_kurvButton"] {
+    color: var(--bg-color);
+    background-color: var(--blue-light);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: 3px;
+    border: var(--blue-light) var(--border-l);
+  }
+
+  [data-variant="lag_i_kurvButton"]:hover {
+    color: var(--bg-color);
+    background-color: var(--blue-dark);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: 3px;
+    border: var(--blue-dark) var(--border-l);
+  }
+
+  /* webshop_cardButton*/
+  [data-variant="webshopCardButton"] {
+    color: var(--pink-light);
+    background-color: var(--bg-color);
+    padding: var(--space-3xl);
+    padding-bottom: var(--space-xs);
+    padding-top: var(--space-xs);
+    border-radius: var(--border-radius-default);
+    border: var(--pink-light) var(--border-l);
   }
 </style>
