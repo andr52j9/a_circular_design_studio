@@ -1,0 +1,21 @@
+---
+const { tekst, variant } = Astro.props;
+---
+
+<select data-variant={variant} name="cars" id="cars">
+  <option value="volvo">{tekst}</option>
+  <option value="saab">{tekst}</option>
+  <option value="mercedes">{tekst}</option>
+</select>
+
+<style>
+  [data-variant="primaryDropdown"] {
+    background-color: var(--bg-color);
+    width: 250px;
+    border: var(--kurv-color) var(--border-xs);
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+    font-size: var(--step-0);
+  }
+</style>

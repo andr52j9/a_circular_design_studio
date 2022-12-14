@@ -4,9 +4,17 @@ import Button from "../components/Button.astro";
 import UndersideCard from "../components/UndersideCard.astro";
 import WebshopCard from "../components/WebshopCard.astro";
 import NavDropdownMenu from "../components/NavDropdownMenu.astro";
+import Forms from "../components/Forms.astro";
+import InstaCard from "../components/InstaCard.astro";
+import Dropdown from "../components/Dropdown.astro";
+import TeametBag from "../components/TeametBag.astro";
 ---
 
 <Layout title="Komponenter | A Circurlar Design Studio">
+  <Dropdown variant="primaryDropdown" tekst="Knap" />
+  <Forms variant="primaryForms" tekst="Knap" />
+  <Forms variant="secondaryForms" tekst="Knap" />
+
   <NavDropdownMenu variant="virksomheder" />
   <UndersideCard
     farve="blue"
@@ -33,5 +41,12 @@ import NavDropdownMenu from "../components/NavDropdownMenu.astro";
     prisfra="pris fra"
     pris="kr 1.895,00"
     img="/img/lampe.webp"
+  />
+  <InstaCard img="/img/regtangularBakke.webp" />
+  <TeametBag
+    img="/img/andreas.webp"
+    navn="ANDREAS ZACHO"
+    titel="Creative Director | CEO | Main circular force"
+    beskrivelse="Andreas er grundlægger og CEO og den kreative mastermind i A CIRCULAR DESIGN STUDIO. Der var ikke noget af det her, der var sket, hvis det ikke var for ham."
   />
 </Layout>
