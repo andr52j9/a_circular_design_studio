@@ -1,10 +1,48 @@
 ---
-const { img, produktnavn, pris, farve } = Astro.props;
+const { img, produktnavn, pris } = Astro.props;
 ---
+<div class="wrapper">
+<div class="card_wrapper">
+    <img src={img} alt={produktnavn}>
+    <div class="text_wrapper">
+    <h3 class="produktnavn">{produktnavn}</h3>
+    <h5 class="pris">{pris}</h5>
+</div>
+</div>
 
 <div class="card_wrapper">
-    <img src="{img}" alt="">
-    <h3>{produktnavn}</h3>
-    <h3>{produktnavn}</h3>
-    <h5>{pris}</h5>
+    <img src={img} alt={produktnavn}>
+    <div class="text_wrapper">
+    <h3 class="produktnavn">{produktnavn}</h3>
+    <h5 class="pris">{pris}</h5>
 </div>
+</div>
+</div>
+
+
+<style>
+.wrapper {
+    display: flex;
+    gap: 190px;
+}
+
+   img {
+    max-width: 450px;
+    max-height: 645px;
+   }
+   
+   .text_wrapper {
+    display: grid;
+    max-width: 450px;
+    max-height: 645px;
+   }
+
+   .pris{
+    padding-top: var(--space-m);
+    place-self: end;
+   }
+
+   .produktnavn {
+    padding-top: var(--space-m);
+   }
+</style>
