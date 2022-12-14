@@ -6,6 +6,7 @@ import Kurv from "./Kurv.astro";
 <header>
   <div><img src="/logo.svg" alt="" /></div>
   <nav>
+    <div></div>
     <div class="dropdown">
       <NavPunkt
         punkt="Til virksomheder"
@@ -61,7 +62,7 @@ import Kurv from "./Kurv.astro";
       display: flex;
       justify-content: space-between;
       gap: var(--space-l);
-      align-items: center;
+      align-items: flex-start;
     }
     .dropdown {
       background-color: var(--bg-color);
@@ -89,6 +90,12 @@ import Kurv from "./Kurv.astro";
         display: flex;
         justify-content: space-between;
         padding: var(--space-xl) 3.75rem var(--space-m) 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-l);
+        align-items: flex-start;
       }
     }
   </style>
