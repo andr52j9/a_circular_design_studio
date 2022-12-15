@@ -19,28 +19,21 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
         <div class="dropdown">
           <NavPunkt
             punkt="Til virksomheder"
-            underline="yellow"
+            underline="lightyellow"
             href="#"
             dropdown={true}
           />
           <div class="dropdown_content">
             <NavPunkt
               punkt="Workshop"
-              underline="red"
+              underline="green"
               href="workshop"
               dropdown={false}
             />
             <NavPunkt
               punkt="Rådgivning"
-              underline="blueLight"
+              underline="lightblue"
               href="raadgivning"
-              dropdown={false}
-            />
-
-            <NavPunkt
-              punkt="Projekter"
-              underline="greenDark"
-              href="projekter"
               dropdown={false}
             />
           </div>
@@ -49,55 +42,58 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
         <div class="dropdown">
           <NavPunkt
             punkt="Om os"
-            underline="green"
+            underline="red"
             href="componentsite"
             dropdown={true}
           />
           <div class="dropdown_content">
             <NavPunkt
-              punkt="Workshop"
-              underline="red"
-              href="workshop"
+              punkt="Teamet bag"
+              underline="yellow"
+              href="teamet-bag"
               dropdown={false}
             />
             <NavPunkt
-              punkt="Rådgivning"
-              underline="blueLight"
-              href="raadgivning"
+              punkt="Cirkulær økonomi"
+              underline="darkpink"
+              href="cirkulaeroekonomi"
               dropdown={false}
             />
 
             <NavPunkt
-              punkt="Projekter"
-              underline="greenDark"
-              href="projekter"
+              punkt="Forhandler"
+              underline="darkgreen"
+              href="forhandler"
               dropdown={false}
             />
           </div>
         </div>
 
-        <NavPunkt punkt="Kontakt" underline="red" href="#" dropdown={false} />
+        <NavPunkt
+          punkt="Kontakt"
+          underline="darkblue"
+          href="kontakt"
+          dropdown={false}
+        />
 
         <div class="dropdown">
-          <NavPunkt punkt="Shop" underline="blue" href="#" dropdown={true} />
+          <NavPunkt
+            punkt="Shop"
+            underline="lightgreen"
+            href="#"
+            dropdown={true}
+          />
           <div class="dropdown_content">
             <NavPunkt
-              punkt="Workshop"
-              underline="red"
-              href="workshop"
+              punkt="Køb produkter"
+              underline="lightblue"
+              href="produkter"
               dropdown={false}
             />
             <NavPunkt
-              punkt="Rådgivning"
-              underline="blueLight"
-              href="raadgivning"
-              dropdown={false}
-            />
-
-            <NavPunkt
-              punkt="Projekter"
-              underline="greenDark"
-              href="projekter"
+              punkt="Special ordre"
+              underline="darkpink"
+              href="special-ordre"
               dropdown={false}
             />
           </div>
