@@ -108,21 +108,27 @@ a {
   --pink-light: var(--color-pink-200);
   --pink: var(--color-pink-300);
   --pink-dark: var(--color-pink-500);
+
   --red-light: var(--color-red-400);
   --red: var(--color-red-500);
   --red-dark: var(--color-red-700);
+
   --blue-light: var(--color-blue-400);
   --blue: var(--color-blue-500);
   --blue-dark: var(--color-blue-700);
-  --green-exLight: var(--color-green-100);
 
+  --green-exLight: var(--color-green-100);
   --green-light: var(--color-green-400);
   --green: var(--color-green-500);
   --green-dark: var(--color-green-700);
+
   --yellow-light: var(--color-yellow-400);
   --yellow: var(--color-yellow-500);
   --yellow-dark: var(--color-yellow-700);
+
   --bg-color: var(--color-greyscale-100);
+  --white: var(--color-greyscale-100);
+
   --heading-color: var(--color-greyscale-700);
   --text-color-dark: var(--color-greyscale-600);
   --text-color-medium: var(--color-greyscale-500);
@@ -131,7 +137,6 @@ a {
   --nav-a-color-hover: var(--color-greyscale-700);
   --kurv-color: var(--color-greyscale-500);
   --kurv-color-hover: var(--color-greyscale-600);
-  --white: var(--color-greyscale-100);
 
   /* Spacing */
   --space-3xs: clamp(0.25rem, calc(0.25rem + 0vw), 0.25rem);

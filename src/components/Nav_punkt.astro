@@ -67,19 +67,42 @@ const { punkt, href, underline, dropdown } = Astro.props;
     color: var(--nav-a-color-hover);
   }
 
+  a.lightblue:after {
+    background-color: var(--blue-light);
+  }
+
   a.blue:after {
     background-color: var(--blue);
+  }
+  a.darkblue:after {
+    background-color: var(--blue-dark);
+  }
+
+  a.lightyellow:after {
+    background-color: var(--yellow-light);
   }
   a.yellow:after {
     background-color: var(--yellow);
   }
+
+  a.darkyellow:after {
+    background-color: var(--yellow-dark);
+  }
   a.red:after {
     background-color: var(--red);
   }
-  a.pink:after {
-    background-color: var(--pink);
+
+  a.darkpink:after {
+    background-color: var(--pink-dark);
+  }
+  a.lightgreen:after {
+    background-color: var(--green-light);
   }
   a.green:after {
     background-color: var(--green);
+  }
+
+  a.darkgreen:after {
+    background-color: var(--green-dark);
   }
 </style>
