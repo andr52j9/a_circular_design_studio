@@ -9,17 +9,18 @@ const { tekst, variant } = Astro.props;
 
   button h4 {
     color: var(--bg-color);
+    text-transform: uppercase;
+    font-stretch: condensed;
   }
 
-  button :hover h4 {
+  button:hover h4 {
     color: var(--pink-dark);
   }
 
   /* lyserød knap */
 
   [data-variant="primaryButton"] {
-    color: var(--bg-color);
-    background-color: transparent;
+    background-color: var(--pink-dark);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
@@ -28,7 +29,6 @@ const { tekst, variant } = Astro.props;
   }
 
   [data-variant="primaryButton"]:hover {
-    color: var(--pink-dark);
     background-color: var(--bg-color);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
@@ -37,15 +37,22 @@ const { tekst, variant } = Astro.props;
     border: var(--pink-dark) var(--border-l);
   }
 
+  [data-variant="primaryButton"]:hover h4 {
+    color: var(--pink-dark);
+  }
+
   /* blå knap */
   [data-variant="secondaryButton"] {
-    color: var(--bg-color);
     background-color: var(--blue-dark);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: 3px;
     border: var(--blue-dark) var(--border-l);
+  }
+
+  [data-variant="secondaryButton"] h4 {
+    color: var(--bg-color);
   }
 
   [data-variant="secondaryButton"]:hover {
@@ -57,11 +64,13 @@ const { tekst, variant } = Astro.props;
     border-radius: var(--border-radius-default);
     border: var(--blue-dark) var(--border-l);
   }
+  [data-variant="secondaryButton"]:hover h4 {
+    color: var(--blue-dark);
+  }
 
   /* læg i kurv */
 
   [data-variant="LagIKurvButton"] {
-    color: var(--bg-color);
     background-color: var(--blue-light);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
@@ -70,8 +79,11 @@ const { tekst, variant } = Astro.props;
     border: var(--blue-light) var(--border-l);
   }
 
-  [data-variant="LagIKurvButton"]:hover {
+  [data-variant="LagIKurvButton"] h4 {
     color: var(--bg-color);
+  }
+
+  [data-variant="LagIKurvButton"]:hover {
     background-color: var(--blue-dark);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
@@ -79,12 +91,11 @@ const { tekst, variant } = Astro.props;
     border-radius: 3px;
     border: var(--blue-dark) var(--border-l);
   }
+  [data-variant="LagIKurvButton"]:hover h4 {
+    color: var(--bg-color);
+  }
 
   /* webshop_cardButton*/
-
-  .button_tekst {
-    color: var(--pink-light);
-  }
 
   [data-variant="webshopCardButton"] {
     color: var(--pink-light);
@@ -94,6 +105,10 @@ const { tekst, variant } = Astro.props;
     padding-top: var(--space-xs);
     border-radius: var(--border-radius-default);
     border: var(--pink-light) var(--border-l);
+  }
+  [data-variant="webshopCardButton"]h4,
+  [data-variant="webshopCardButton"]:hover h4 {
+    color: var(--pink-light);
   }
 
   /* GavekortButton */
@@ -106,6 +121,10 @@ const { tekst, variant } = Astro.props;
     border-radius: 3px;
     border: var(--green) var(--border-l);
   }
+  [data-variant="GavekortButton"]h4 {
+    color: var(--green);
+  }
+
   [data-variant="GavekortButton"]:hover {
     color: var(--green);
     background-color: var(--green-exLight);
@@ -114,6 +133,9 @@ const { tekst, variant } = Astro.props;
     padding-top: var(--space-2xs);
     border-radius: 3px;
     border: var(--green) var(--border-l);
+  }
+  [data-variant="GavekortButton"]:hover h4 {
+    color: var(--green);
   }
 
   [data-variant="GavekortButton"]:focus {
