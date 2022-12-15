@@ -1,5 +1,13 @@
 <div>
   <table>
+    <button class="carousel-button prev" data-carousel-button="prev">
+      &#8592;
+    </button>
+    <h5>December</h5>
+    <button class="carousel-button next" data-carousel-button="next">
+      &#8594;
+    </button>
+
     <thead>
       <tr class="dage">
         <th>Man.</th>
@@ -64,9 +72,13 @@
 </div>
 
 <style>
-  table {
+  div {
     border-radius: 3px;
     border: var(--text-color-medium) var(--border-l);
+    width: 520px;
+    height: 515px;
+  }
+  table {
     width: 520px;
     height: 515px;
     font-size: var(--font-size-s);
@@ -80,5 +92,17 @@
   }
   tr :hover {
     background-color: var(--text-color-light);
+  }
+
+  .carousel-button {
+    background: none;
+    border: none;
+    font-weight: lighter;
+    font-size: 2em;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(50%);
+    color: black;
+    cursor: pointer;
   }
 </style>
