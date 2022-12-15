@@ -1,9 +1,19 @@
 ---
-const { tal, text } = Astro.props;
+const { tal, tekst, icon_plus, icon_minus } = Astro.props;
 ---
 
 <div class="wrapper">
-<input type={tal}>
+    <h6>{tekst}</h6>
+    <div class="antal_card">
+<input class="input_tal" type={tal}>
+<div class="plus_wrapper">
+<img src={icon_plus} alt="">
+</div>
+<div>
+<img src={icon_minus} alt="">
+</div>
+
+</div>
 
 </div>
 
