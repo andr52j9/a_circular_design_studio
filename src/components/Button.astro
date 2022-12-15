@@ -2,7 +2,7 @@
 const { tekst, variant } = Astro.props;
 ---
 
-<button data-variant={variant}><h4>{tekst}</h4></button>
+<button data-variant={variant}><h4 class="button_tekst">{tekst}</h4></button>
 
 <style>
   /* generelt knap */
@@ -81,6 +81,11 @@ const { tekst, variant } = Astro.props;
   }
 
   /* webshop_cardButton*/
+
+  .button_tekst {
+    color: var(--pink-light);
+  }
+
   [data-variant="webshopCardButton"] {
     color: var(--pink-light);
     background-color: var(--bg-color);
