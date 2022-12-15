@@ -1,42 +1,32 @@
-<div class="slide1">
-  <img
-    src="/img/Montana_avenyChair_AndersEgngholm_04_H.webp"
-    alt="avenyChair"
-  />
-  <img src="/img/Montana1.webp" alt="Montana" />
-  <img src="/img/andreasMedPlade.webp" alt="Andreas med plade" />
-</div>
-
-<div class="slide2">
-  <img src="/img/Skamlen.webp" alt="skamlen" />
-</div>
-
-<div class="slide3">
-  <img src="/img/Montana2.webp" alt="Montana2" />
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">
-  <img src="/img/arow.webp" alt="pil" />
-</a>i
-
-<div class="carousel" data-carousel>
+<!-- <div class="carousel" data-carousel>
   <button class="carousel-button prev" data-carousel-button="prev">
     &#8592;
   </button>
-  <button class="carousel-button next" data-carousel-button="next">
-    &#8594;
-  </button>
+
 
   <ul data-slides>
     <li class="slide" data-active>
-      <img src="menu_1.png" alt="forside" />
+      <img
+        src="/img/Montana_AvenyChair_AndersEngholm_04_H.webp"
+        alt="avenyChair"
+      />
+      <img src="/img/Montana1.webp" alt="Montana" />
+      <img src="/img/andreasMedPlade.webp" alt="Andreas med plade" />
     </li>
-    <li class="slide"><img src="menu_2.png" alt="side 1 og 2" /></li>
-    <li class="slide"><img src="menu_3.png" alt="bagside" /></li>
+    <li class="slide">
+      <img src="/img/Montana1.webp" alt="Montana" />
+      <img src="/img/andreasMedPlade.webp" alt="Andreas med plade" />
+      <img src="/img/Skamlen.webp" alt="skamlen" />
+    </li>
+    <li class="slide">
+      \
+      <img src="/img/Montana2.webp" alt="Montana2" />
+    </li>
   </ul>
-</div>
-
+  <button class="carousel-button next" data-carousel-button="next">
+    &#8594;
+  </button>
+</div> -->
 <script>
   const buttons = document.querySelectorAll("[data-carousel-button]");
 
@@ -93,14 +83,13 @@
     z-index: 2;
     top: 50%;
     transform: translateY(50%);
-    color: #641b2c;
+    color: black;
     cursor: pointer;
   }
 
   .carousel-button:hover {
-    background-color: rgba(100, 27, 44, 0.2);
+    background-color: var(--color-pink-200);
     color: black;
-    outline: 0.75px solid #641b2c;
   }
 
   .prev {
@@ -115,5 +104,10 @@
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  img {
+    width: 300px;
+    height: 493px;
   }
 </style>
