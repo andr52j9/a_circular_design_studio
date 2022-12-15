@@ -3,8 +3,7 @@ const { Dato, dag, tidspunkt, sted } = Astro.props;
 ---
 
 <h3>{Dato}</h3>
-<h6>{dag}</h6>
-
+<h6 class="dag">{dag}</h6>
 <h6>{sted}</h6>
 <h4>{sted}</h4>
 <h5>{tidspunkt}</h5>
@@ -18,6 +17,6 @@ const { Dato, dag, tidspunkt, sted } = Astro.props;
     top: 5px;
     background-color: var(--yellow);
     transition: all 0.3s;
-    width: 100%;
+    width: 200px;
   }
 </style>
