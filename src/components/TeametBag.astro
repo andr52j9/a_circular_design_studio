@@ -1,26 +1,64 @@
 ---
-const { img, navn, titel, beskrivelse, læsMere, mail } = Astro.props;
+const { img, navn, titel, beskrivelse, laesMere, kontakt, mail } = Astro.props;
 ---
 
 <article class="article_wrapper">
     <img src={img} alt="temaet bag">
     <div class="text_wrapper">
         <h3>{navn}</h3>
-        <h6>{titel}</h6>
-        <p>{beskrivelse}</p>
-        <div>{læsMere}</div>
-        <a href={mail}></a>
+        <h6 class="titel">{titel}</h6>
+        <p class="beskrivelse">{beskrivelse}</p>
+        <h5 class="laesmere">{laesMere}</h5>
+        <div>
+            <h6 class="kontakt">{kontakt}</h6>
+            <a href={mail}><h6 class="mail">{mail}</h6></a>
+        </div>
     </div>
 </article>
 
 <style>
-
-    .article_wrapper {
-        display: flex;
-    }
-
-    img {
+     img {
     max-width: 550px;
     max-height: 580px;
     }
+
+    .article_wrapper {
+        display: flex;
+        gap: 110px;
+    }
+
+    .text_wrapper {
+      display: grid;
+      height: fit-content;
+    }
+
+    h3 {
+        color: var(--color-yellow-500);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .titel {
+        padding-top: var(--space-xs);
+        padding-bottom: var( --space-m);
+        font-weight: var( --font-weight-light);
+        color: var( --color-greyscale-400);
+    }
+
+    h5 .laesmere {
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-2xl);
+        font-weight: var(--font-weight-regular);
+        color: var( --color-greyscale-400);
+        place-self: end;
+    }
+
+    .kontakt {
+        font-weight: var(--font-weight-light);
+        color: var( --color-greyscale-400);
+    }
+
+    .mail {
+        color: var(--color-yellow-500);
+    }
+
 </style>
