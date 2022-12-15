@@ -8,7 +8,9 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail } = Astro.props;
         <h3>{navn}</h3>
         <h6 class="titel">{titel}</h6>
         <p class="beskrivelse">{beskrivelse}</p>
+        <div class="underline_laesmere">
         <h5 class="laesmere">{laesMere}</h5>
+    </div>
         <div class="kontakt_wrapper">
             <h6 class="kontakt">{kontakt}</h6>
             <a href={mail}><h6 class="mail">{mail}</h6></a>
@@ -44,12 +46,16 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail } = Astro.props;
         color: var( --color-greyscale-400);
     }
 
+.underline_laesmere {
+    display: flex;
+	justify-content: flex-end;
+}
+
     .laesmere {
         padding-top: var(--space-xl);
         padding-bottom: var(--space-2xl);
         font-weight: var(--font-weight-regular);
         color: var( --color-greyscale-400);
-        justify-content: left;
     }
 
     .laesmere::after {
@@ -60,8 +66,7 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail } = Astro.props;
     top: 5px;
     background-color: var(--yellow);
     transition: all 0.3s;
-    width: 300px;
-  
+    width: 100%;
     }
 
     .kontakt {
