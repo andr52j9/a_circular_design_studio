@@ -3,32 +3,39 @@ const { tal } = Astro.props;
 ---
 
 <div class="wrapper">
-    <h6>Antal</h6>
+  <h6>Antal</h6>
 
-    <div class="antal_wrapper">
-<!-- <input class="input_tal" type={tal}> -->
-
-<div class="plus_wrapper">
-<img class="icon_plus" src="/icons/plus.svg" alt="">
-</div>
-
-<div class="plus_wrapper">
-    <img class="icon_plus" src="/icons/minus.svg" alt="">
-    </div>
-
-</div>
+  <div class="antal_wrapper">
+    <img class="plus_wrapper" src="/icons/plus.svg" alt="" />
+    <p>1</p>
+    <img class="minus_wrapper" src="/icons/minus.svg" alt="" />
+  </div>
 </div>
 
 <style>
+  img {
+    border-radius: 3px;
+    border: var(--color-greyscale-700) var(--border-xs);
+  }
 
-.icon_plus {
-max-width: 32px;
-max-height: 32px;
-    }
+  .minus_wrapper {
+    place-content: end;
+    width: 56px;
+    height: 56px;
+  }
 
-.antal_wrapper {
-border: var(--border-xs);
-width: 174px;
-height: 56px;
-    }
+  .plus_wrapper {
+    place-content: end;
+    width: 56px;
+    height: 56px;
+  }
+  .antal_wrapper {
+    border-radius: 3px;
+    border: var(--border-xs);
+    width: 174px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 </style>
