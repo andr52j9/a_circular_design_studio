@@ -9,6 +9,8 @@ import Dropdown from "../components/Dropdown.astro";
 import TeametBag from "../components/TeametBag.astro";
 import Calendar from "../components/Calendar.astro";
 import Carousel from "../components/Carousel.astro";
+import AntalButton from "../components/AntalButton.astro";
+import CalenderForside from "../components/CalenderForside.astro";
 ---
 
 <Layout title="Komponenter | A Circurlar Design Studio">
@@ -53,5 +55,19 @@ import Carousel from "../components/Carousel.astro";
     laesMere="Læs mere om Andreas +"
     kontakt="kontakt"
     mail="andreaszacho@acirculardesignstudio.com"
+  />
+
+  <AntalButton
+    tal="1"
+    tekst="Antal"
+    icon_plus="/icons/plus.svg"
+    icon_minus="/icons/minus.svg"
+  />
+  <CalenderForside
+    Dato="9"
+    dag="Freadg"
+    sted="Nørrebrohallen"
+    sted="FLID julemarked"
+    tidspunkt="14.00-20.00"
   />
 </Layout>
