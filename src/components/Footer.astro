@@ -117,12 +117,14 @@ import Cirkel from "./Cirkel.astro";
   }
 
   footer {
-    padding: 128px 0 var(--space-xl) 0;
     overflow: hidden;
+    place-items: flex-start;
   }
   .footer_grid {
-    display: grid;
-    grid-template-columns: repeat(16, var(--space-3xl));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-xl);
   }
 
   .logo {
@@ -130,11 +132,6 @@ import Cirkel from "./Cirkel.astro";
     width: 79%;
     grid-column: 1/6;
     grid-row: 1/2;
-  }
-
-  .adresse_wrapper {
-    grid-column: 2/4;
-    grid-row: 2/3;
   }
 
   address,
@@ -173,11 +170,8 @@ import Cirkel from "./Cirkel.astro";
     justify-content: space-between;
     place-self: flex-start;
     align-self: stretch;
-  }
-
-  .kontakt_info {
-    grid-column: 6/9;
-    grid-row: 2/3;
+    gap: var(--space-m);
+    padding: 0 var(--space-3xl);
   }
 
   .flex_row {
@@ -185,12 +179,6 @@ import Cirkel from "./Cirkel.astro";
     flex-direction: row;
     gap: var(--space-3xs);
     align-items: center;
-  }
-
-  .SoMe {
-    grid-column: 12;
-    grid-row: 2/3;
-    align-self: flex-end;
   }
 
   .icon_wrapper {
@@ -208,15 +196,12 @@ import Cirkel from "./Cirkel.astro";
     fill: var(--text-color-light);
   }
 
-  #cirkel_footer {
-    position: absolute;
-    right: 0;
+  .SoMe {
+    padding: 0 var(--space-3xl);
   }
+
   .cirkel {
-    grid-column: 14/19;
-    grid-row: 1/4;
-    position: relative;
-    z-index: -3;
+    order: -1;
   }
 
   .e-jura {
@@ -227,6 +212,7 @@ import Cirkel from "./Cirkel.astro";
     gap: var(--space-2xl);
     margin-top: var(--space-xl);
     align-items: flex-end;
+    padding: 0 var(--space-3xl);
   }
 
   .e-jura a {
@@ -236,5 +222,44 @@ import Cirkel from "./Cirkel.astro";
 
   .e-jura a:hover {
     color: var(--text-color-dark);
+  }
+
+  @media (min-width: 810px) {
+    footer {
+      padding: 128px 0 var(--space-xl) 0;
+    }
+    .footer_grid {
+      display: grid;
+      grid-template-columns: repeat(16, var(--space-3xl));
+      justify-content: unset;
+      gap: unset;
+    }
+    .flex_column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      place-self: flex-start;
+      align-self: stretch;
+    }
+    .adresse_wrapper {
+      grid-column: 2/4;
+      grid-row: 2/3;
+    }
+
+    .kontakt_info {
+      grid-column: 6/9;
+      grid-row: 2/3;
+    }
+    .SoMe {
+      grid-column: 12;
+      grid-row: 2/3;
+      align-self: flex-end;
+    }
+    .cirkel {
+      grid-column: 14/19;
+      grid-row: 1/4;
+      position: relative;
+      z-index: -3;
+    }
   }
 </style>
