@@ -147,8 +147,8 @@ a {
 
   /* font family */
   --font-family-body: "Helvetica Neue", Helvetica, sans-serif;
-  --font-family-headings: "Helvetica Neue", serif;
-  --font-family-nav: "Helvetica Neue", serif;
+  --font-family-headings: "Helvetica Neue", Helvetica, serif;
+  --font-family-nav: "Helvetica Neue", Helvetica, serif;
 
   /* Global font size */
   --step--2: clamp(0.61rem, calc(0.6rem + 0.06vw), 0.64rem);
