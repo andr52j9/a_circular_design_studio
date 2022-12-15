@@ -1,12 +1,63 @@
+---
+const { tekst, variant } = Astro.props;
+---
+
 <div>
+  <form>
+    <label for="fname"> <h6>Lerverings dato</h6></label>
+    <input type="datetime-local" />
+  </form>
+</div>
+<br />
+
+<style>
+  label {
+    display: block;
+    font-family: var(--font-family-body);
+  }
+
+  input {
+    border: var(--kurv-color) var(--border-xs);
+  }
+  input,
+  label {
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+    width: 520px;
+    color: var(--text-color-medium);
+    outline: none;
+  }
+  input :focus {
+    border: var(--text-color-dark) var(--border-l);
+  }
+</style>
+
+<!-- <div>
+  <form>
+    <label for="fname"> <h6>Lerverings dato</h6></label><br />
+    <input
+      class="inputFelt"
+      data-variant={variant}
+      type="text"
+      id="fname"
+      name="fname"
+      placeholder="dd/mm-åååå "
+    />
+  </form>
+</div>
+
+<div class="kalenderUdfold hide">
   <table>
-    <button class="carousel-button prev" data-carousel-button="prev">
-      &#8592;
-    </button>
-    <h5>December</h5>
-    <button class="carousel-button next" data-carousel-button="next">
-      &#8594;
-    </button>
+    <div class="topKalender">
+      <button class="carousel-button prev" data-carousel-button="prev">
+        &#8592;
+      </button>
+      <h5>December</h5>
+      <button class="carousel-button next" data-carousel-button="next">
+        &#8594;
+      </button>
+    </div>
 
     <thead>
       <tr class="dage">
@@ -69,10 +120,23 @@
       </tr>
     </tbody>
   </table>
-</div>
+</div> -->
 
-<style>
-  div {
+<!-- <style>
+  .hide {
+    display: none;
+  }
+  .inputFelt {
+  }
+
+  .topKalender {
+    display: flex;
+    place-content: center;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .kalenderUdfold {
     border-radius: 3px;
     border: var(--text-color-medium) var(--border-l);
     width: 520px;
@@ -91,7 +155,7 @@
     color: var(--text-color-light);
   }
   tr :hover {
-    background-color: var(--text-color-light);
+    background-color: var(--color-blue-400);
   }
 
   .carousel-button {
@@ -105,4 +169,24 @@
     color: black;
     cursor: pointer;
   }
+
+  [data-variant="primaryForms"] {
+    color: var(--kurv-color);
+    width: 520px;
+    border: var(--kurv-color) var(--border-xs);
+    padding: var(--space-xs);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+    font-size: var(--step-0);
+  }
 </style>
+
+<script>
+  document
+    .querySelector(".inputFelt")
+    .addEventListener("click", showkalenderUdfold);
+  function showkalenderUdfold() {
+    console.log("der klikkes");
+    document.querySelector(".KalenderUdfold").classList.toggle("hide");
+  }
+</script> -->
