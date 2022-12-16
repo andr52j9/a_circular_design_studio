@@ -6,7 +6,7 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
 
 <header>
   <nav class="">
-    <div class="logo_header"><img src="/logo.svg" alt="" /></div>
+    <a class="logo_header" href="index"><img src="/logo.svg" alt="" /></a>
     <div class="nav_content_wrapper">
       <div class="kurvIcon">
         <Kurv />
@@ -20,7 +20,6 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
           <NavPunkt
             punkt="Til virksomheder"
             underline="lightyellow"
-            href="#"
             dropdown={true}
           />
           <div class="dropdown_content">
@@ -40,12 +39,7 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
         </div>
 
         <div class="dropdown">
-          <NavPunkt
-            punkt="Om os"
-            underline="red"
-            href="componentsite"
-            dropdown={true}
-          />
+          <NavPunkt punkt="Om os" underline="red" dropdown={true} />
           <div class="dropdown_content">
             <NavPunkt
               punkt="Teamet bag"
@@ -62,7 +56,7 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
 
             <NavPunkt
               punkt="Forhandler"
-              underline="darkgreen"
+              underline="green"
               href="forhandler"
               dropdown={false}
             />
@@ -76,13 +70,8 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
           dropdown={false}
         />
 
-        <div class="dropdown">
-          <NavPunkt
-            punkt="Shop"
-            underline="lightgreen"
-            href="#"
-            dropdown={true}
-          />
+        <div class="dropdown noMouse">
+          <NavPunkt punkt="Shop" underline="lightgreen" dropdown={true} />
           <div class="dropdown_content">
             <NavPunkt
               punkt="Køb produkter"
@@ -254,8 +243,10 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
     gap: var(--space-m);
     height: fit-content;
   }
+
   .dropdown_content {
     display: none;
+    align-items: flex-end;
   }
 
   .dropdown:hover .dropdown_content {
