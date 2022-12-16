@@ -1,3 +1,57 @@
 ---
 const { pris } = Astro.props;
+import Button from "./Button.astro";
 ---
+
+<div class="card_wrapper">
+    <div class="top_content">
+    <h3 class="h3_kurv">KURV</h3>
+    <img class="luk_icon" src="/icons/luk.svg" alt="">
+</div>
+<div class="buttom_content">
+    <div class="forsendelse">
+<p>Forsendelsesgebyr</p>
+<p class="gebyr">49 DKK</p>
+</div>
+<div class="subtotal">
+    <h5>Subtotal</h5>
+    <h5 class="pris">{pris}</h5>
+</div>
+<div class="btn"><Button variant = "LagIKurvButton" tekst="Gå til checkout"/></div>
+</div>
+</div>
+
+<style>
+
+    .card_wrapper {
+        width: 607px;
+        height: 900px;
+        border: var( --border-xs);
+    }
+
+.top_content {
+    display: flex;
+}
+
+.luk_icon {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.forsendelse,
+.subtotal {
+    display: flex;
+}
+
+.h3_kurv::after {
+    content: "";
+    display: block;
+    margin-top: var(--space-2xs);
+    height: 3px;
+    top: 5px;
+    background-color: var(--green-light);
+    transition: all 0.3s;
+    width: 400px;
+    }
+
+</style>
