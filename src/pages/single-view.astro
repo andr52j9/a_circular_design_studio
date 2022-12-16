@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AntalButton from "../components/AntalButton.astro";
+import Dropdown from "../components/Dropdown.astro";
+---
+
+<Layout title="Single view | A Circurlar Design Studio">
+  <h2>Cubes - Podium</h2>
+  <img src="" alt="flueben" />
+  <h6>14 dages fuld returret</h6>
+  <img src="" alt="flueben" />
+  <h6>håndlavede produkter</h6>
+
+  <AntalButton
+    tal="1"
+    tekst="Antal"
+    icon_plus="/icons/plus.svg"
+    icon_minus="/icons/minus.svg"
+  />
+  <h4>kr 2.795,00</h4>
+
+  <Dropdown variant="primaryDropdown" tekst="Farve" />
+  <Dropdown variant="primaryDropdown" tekst="Størrelse" />
+  <Button variant="LagIKurvButton" tekst="Læg i kurv" />
+  <p>
+    Cubes er et produkt der besidder mange forskellige anvendelsermulighder, fx
+    til virksomheder der har brug for et solidt og dekorativt møbel at
+    præsentere deres sortiment på, om det så er på udstillinger, messer eller
+    lignende. Podierne kan samtidigt benyttes i private hjem som
+    sidebord/natbord, piedestal eller evt. som sofabord.
+  </p>
+</Layout>
