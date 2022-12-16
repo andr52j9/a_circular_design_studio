@@ -2,74 +2,74 @@
 const { img, produktnavn, prisfra, pris } = Astro.props;
 import Button from "./Button.astro";
 ---
-<div class="wrapper">
-<article class="card_wrapper">
-    <div class="container">
-    <img src={img} alt={produktnavn}>
-    <div class="overlay"></div>
-    <div class="btn"><Button variant = "webshopCardButton" /></div>
-</div>
-    <div class="text_wrapper">
-    <h3 class="produktnavn">{produktnavn}</h3>
-    <div class="pris">
-    <h6>{prisfra}</h6>
-    <h5 >{pris}</h5>
-</div>
-</div>
-</article>
-</div>
 
+<a href={produktnavn} class="wrapper">
+  <article class="card_wrapper">
+    <div class="container">
+      <img src={img} alt={produktnavn} />
+      <div class="overlay"></div>
+      <div class="btn"><Button variant="webshopCardButton" /></div>
+    </div>
+    <div class="text_wrapper">
+      <h3 class="produktnavn">{produktnavn}</h3>
+      <div class="pris">
+        <h6>{prisfra}</h6>
+        <h5>{pris}</h5>
+      </div>
+    </div>
+  </article>
+</a>
 
 <style>
-.wrapper {
+  .wrapper {
     display: flex;
-}
+  }
 
-   img {
+  img {
     max-width: 450px;
     max-height: 645px;
-   }
+  }
 
-   .container {
+  .container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-   }
+  }
 
-   .container:hover .btn {
+  .container:hover .btn {
     display: block;
-}
+  }
 
-.btn {
+  .btn {
     position: absolute;
     display: none;
-}
+  }
 
-.btn:hover {
+  .btn:hover {
     position: relative;
     display: none;
-}
+  }
 
-   img:hover {
-   opacity: 50%;
-   background-color: var(--color-greyscale-400:);
-}
+  img:hover {
+    opacity: 50%;
+    background-color: var(--color-greyscale-400: );
+  }
 
-   .text_wrapper {
+  .text_wrapper {
     display: grid;
     max-width: 450px;
     max-height: 645px;
-   }
+  }
 
-   .pris{
+  .pris {
     display: flex;
     padding-top: var(--space-m);
     place-self: end;
     gap: var(--space-2xs);
-   }
+  }
 
-   .produktnavn {
+  .produktnavn {
     padding-top: var(--space-m);
-   }
+  }
 </style>

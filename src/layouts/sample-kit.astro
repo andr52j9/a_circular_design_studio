@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AntalButton from "../components/AntalButton.astro";
+import Dropdown from "../components/Dropdown.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Sample Kit | A Circurlar Design Studio">
+  <h2>Sample Kit</h2>
+  <img src="" alt="flueben" />
+  <h6>14 dages fuld returret</h6>
+  <img src="" alt="flueben" />
+  <h6>håndlavede produkter</h6>
+
+  <AntalButton
+    tal="1"
+    tekst="Antal"
+    icon_plus="/icons/plus.svg"
+    icon_minus="/icons/minus.svg"
+  />
+  <h4>kr 249,00</h4>
+
+  <Button variant="LagIKurvButton" tekst="Læg i kurv" />
+  <p>
+    Vi har lavet nogle små sæt, med 4-5 forskellige farver, profiler og finish,
+    til jer der gerne vil have lidt mere følelse af materialet. Sættene er
+    selvfølgelig ikke ens, fordi de netop er lavet af produktionsrester, men der
+    vil være 4 til 5 farver i hver kasse.
+  </p>
+  <img src="sampleKit.webp" alt="sampleKit" />
+  <img src="sample-kit.webp" alt="sampleKit" />
+  <img src="sample-kit2.webp" alt="sampleKit" />
+
+  <h5>Leveringstid</h5>
+  <p>
+    Alle vores produkter er håndlavede, hvilket betyder vi producerer
+    produkterne løbende, når de bestilles. <br />
+
+    Derfor vil der være ca 3-4 ugers levering, afhængig af størrelsen på ordren. <br
+    />
+
+    Hvis ordren haster, er i velkomne til at kontakte os, så skal vi prøve at få
+    den ført igennem hurtigst muligt.
+  </p>
+
+  <h5>Leveringsomkostninger</h5>
+  <p>
+    Fragt koster 99 kroner i hele Danmark pr podie. Ved større bestillinger, kan
+    i kontakte os, både for betaling via faktura og samlet fragt. <br />
+
+    Du kan også vælge at afhente gratis i vores butik på Nørrebro i København
+    eller på vores værksted i Skovlunde.
+  </p>
+</Layout>

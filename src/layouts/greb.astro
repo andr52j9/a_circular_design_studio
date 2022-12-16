@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AntalButton from "../components/AntalButton.astro";
+import Dropdown from "../components/Dropdown.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Greb | A Circurlar Design Studio">
+  <h2>Greb</h2>
+  <img src="" alt="flueben" />
+  <h6>14 dages fuld returret</h6>
+  <img src="" alt="flueben" />
+  <h6>håndlavede produkter</h6>
+
+  <AntalButton
+    tal="1"
+    tekst="Antal"
+    icon_plus="/icons/plus.svg"
+    icon_minus="/icons/minus.svg"
+  />
+  <h4>kr 69,00</h4>
+
+  <Dropdown
+    variant="primaryDropdown"
+    tekst="Farve"
+    tekst="Dragonfruit drizzle"
+    tekst="Cloudy Peach"
+    tekst="Kiwi Currents"
+    tekst="Plum Puddles"
+    tekst="Blueberry Blizzard"
+    tekst="Mango Haze"
+    tekst="Papaya Rainbows"
+  />
+
+  <Button variant="LagIKurvButton" tekst="Læg i kurv" />
+  <p>
+    Vores greb er perfekte, som et lille pift til den gamle kommode,
+    køkkenskabene eller som et alternativ til den traditionelle knage. Grebene
+    er simple i formgivningen og trækker tråde tilbage til 70erne og 80erne, men
+    vores skabes af genbrugsplast og med vores 7 forskellige farver, er der med
+    garanti noget der passer til netop dit hjem!
+  </p>
+  <img src="greb.webp" alt="greb" />
+  <img src="knage4.webp" alt="greb" />
+  <img src="greb2.webp" alt="greb" />
+  <img src="rundknage.webp" alt="greb" />
+
+  <h5>Leveringstid</h5>
+  <p>
+    Alle vores produkter er håndlavede, hvilket betyder vi producerer
+    produkterne løbende, når de bestilles. <br />
+
+    Derfor vil der være ca 3-4 ugers levering, afhængig af størrelsen på ordren. <br
+    />
+
+    Hvis ordren haster, er i velkomne til at kontakte os, så skal vi prøve at få
+    den ført igennem hurtigst muligt.
+  </p>
+
+  <h5>Leveringsomkostninger</h5>
+  <p>
+    Fragt koster 99 kroner i hele Danmark pr podie. Ved større bestillinger, kan
+    i kontakte os, både for betaling via faktura og samlet fragt. <br />
+
+    Du kan også vælge at afhente gratis i vores butik på Nørrebro i København
+    eller på vores værksted i Skovlunde.
+  </p>
+</Layout>

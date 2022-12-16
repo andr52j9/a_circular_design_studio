@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AntalButton from "../components/AntalButton.astro";
+import Dropdown from "../components/Dropdown.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Rektangulære Bakker| A Circurlar Design Studio">
+  <h2>Rektangulære Bakker</h2>
+  <img src="" alt="flueben" />
+  <h6>14 dages fuld returret</h6>
+  <img src="" alt="flueben" />
+  <h6>håndlavede produkter</h6>
+
+  <AntalButton
+    tal="1"
+    tekst="Antal"
+    icon_plus="/icons/plus.svg"
+    icon_minus="/icons/minus.svg"
+  />
+  <h4>kr 100,00</h4>
+
+  <Dropdown
+    variant="primaryDropdown"
+    tekst="Farve"
+    tekst="Dragonfruit drizzle"
+    tekst="Cloudy Peach"
+    tekst="Kiwi Currents"
+    tekst="Plum Puddles"
+    tekst="Blueberry Blizzard"
+    tekst="Mango Haze"
+    tekst="Papaya Rainbows"
+  />
+  <Dropdown
+    variant="primaryDropdown"
+    tekst="Størrelse"
+    tekst="lille (6,5x13)"
+    tekst="mellem (9x20)"
+    tekst="mellem stor (16x26)"
+    tekst="stor (16x34)"
+  />
+  <Button variant="LagIKurvButton" tekst="Læg i kurv" />
+  <p>
+    Vores rektangulære bakker passer ind i et hvert hjem. Det er en nem og
+    farverig måde at få organiseret sine olier, salt & peber i køkkenet.Få styr
+    på håndsæben og småtingene på badeværelset, til nøgler, eller småpenge og
+    måske endda smykker på kommoden. De rektangulære bakker kommer i 4
+    størrelser og er designet på en sådan måde, at man kan kombinere én eller
+    flere styk, hvis man ønsker lidt adskillelse i sin opbevaring.
+  </p>
+  <img src="rektangulær-bakke.webp" alt="rektangulær-bakke" />
+  <img src="" alt="rektangulær1" />
+  <img src="regtangularBakke.webp" alt="rektangulær-bakke3" />
+  <img src="Rektangulær-sæt.webp" alt="lrektangulær-bakke4" />
+
+  <h5>Leveringstid</h5>
+  <p>
+    Alle vores produkter er håndlavede, hvilket betyder vi producerer
+    produkterne løbende, når de bestilles. <br />
+
+    Derfor vil der være ca 3-4 ugers levering, afhængig af størrelsen på ordren. <br
+    />
+
+    Hvis ordren haster, er i velkomne til at kontakte os, så skal vi prøve at få
+    den ført igennem hurtigst muligt.
+  </p>
+
+  <h5>Leveringsomkostninger</h5>
+  <p>
+    Fragt koster 99 kroner i hele Danmark pr podie. Ved større bestillinger, kan
+    i kontakte os, både for betaling via faktura og samlet fragt. <br />
+
+    Du kan også vælge at afhente gratis i vores butik på Nørrebro i København
+    eller på vores værksted i Skovlunde.
+  </p>
+</Layout>

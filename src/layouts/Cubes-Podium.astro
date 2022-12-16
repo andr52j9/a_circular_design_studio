@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AntalButton from "../components/AntalButton.astro";
+import Dropdown from "../components/Dropdown.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Cubes Podium | A Circurlar Design Studio">
+  <h2>Cubes - Podium</h2>
+  <img src="" alt="flueben" />
+  <h6>14 dages fuld returret</h6>
+  <img src="" alt="flueben" />
+  <h6>håndlavede produkter</h6>
+
+  <AntalButton
+    tal="1"
+    tekst="Antal"
+    icon_plus="/icons/plus.svg"
+    icon_minus="/icons/minus.svg"
+  />
+  <h4>kr 2.795,00</h4>
+
+  <Dropdown
+    variant="primaryDropdown"
+    tekst="Farve"
+    variant="primaryDropdown"
+    tekst="Farve"
+    tekst="Dragonfruit drizzle"
+    tekst="Cloudy Peach"
+    tekst="Kiwi Currents"
+    tekst="Plum Puddles"
+    tekst="Blueberry Blizzard"
+    tekst="Mango Haze"
+    tekst="Papaya Rainbows"
+  />
+  <Dropdown
+    variant="primaryDropdown"
+    tekst="Størrelse"
+    tekst="lille"
+    tekst="stor"
+  />
+  <Button variant="LagIKurvButton" tekst="Læg i kurv" />
+  <p>
+    Cubes er et produkt der besidder mange forskellige anvendelsermulighder, fx
+    til virksomheder der har brug for et solidt og dekorativt møbel at
+    præsentere deres sortiment på, om det så er på udstillinger, messer eller
+    lignende. Podierne kan samtidigt benyttes i private hjem som
+    sidebord/natbord, piedestal eller evt. som sofabord.
+  </p>
+  <img src="single1.webp" alt="stor_cubes" />
+  <img src="single2.webp" alt="close_up_stor_cubes" />
+  <img src="podium.webp" alt="podium" />
+  <img src="single3.webp" alt="stor_cubes_lodret" />
+
+  <h5>Leveringstid</h5>
+  <p>
+    Alle vores produkter er håndlavede, hvilket betyder vi producerer
+    produkterne løbende, når de bestilles. <br />
+
+    Derfor vil der være ca 3-4 ugers levering, afhængig af størrelsen på ordren. <br
+    />
+
+    Hvis ordren haster, er i velkomne til at kontakte os, så skal vi prøve at få
+    den ført igennem hurtigst muligt.
+  </p>
+
+  <h5>Leveringsomkostninger</h5>
+  <p>
+    Fragt koster 99 kroner i hele Danmark pr podie. Ved større bestillinger, kan
+    i kontakte os, både for betaling via faktura og samlet fragt. <br />
+
+    Du kan også vælge at afhente gratis i vores butik på Nørrebro i København
+    eller på vores værksted i Skovlunde.
+  </p>
+</Layout>
