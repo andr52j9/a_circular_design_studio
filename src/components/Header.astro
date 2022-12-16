@@ -15,14 +15,14 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
         <BurgermenuIcon />
       </div>
 
-      <div class="nav_content hide">
-        <div class="dropdown">
+      <div class="nav_content web hide">
+        <div class="dropdown web">
           <NavPunkt
             punkt="Til virksomheder"
             underline="lightyellow"
             dropdown={true}
           />
-          <div class="dropdown_content">
+          <div class="dropdown_content web">
             <NavPunkt
               punkt="Workshop"
               underline="green"
@@ -38,9 +38,9 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
           </div>
         </div>
 
-        <div class="dropdown">
+        <div class="dropdown web">
           <NavPunkt punkt="Om os" underline="red" dropdown={true} />
-          <div class="dropdown_content">
+          <div class="dropdown_content web">
             <NavPunkt
               punkt="Teamet bag"
               underline="yellow"
@@ -70,9 +70,9 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
           dropdown={false}
         />
 
-        <div class="dropdown noMouse">
+        <div class="dropdown web noMouse">
           <NavPunkt punkt="Shop" underline="lightgreen" dropdown={true} />
-          <div class="dropdown_content">
+          <div class="dropdown_content web">
             <NavPunkt
               punkt="Køb produkter"
               underline="lightblue"
@@ -188,6 +188,22 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
     console.log("der klikkes");
     document.querySelector(".nav_content_burger ").classList.toggle("hide");
   }
+  document
+    .querySelector(".dropdown.web")
+    .addEventListener("mouseover", showDropdownContent);
+  function showDropdownContent() {
+    console.log("hover på dropdown");
+    document.querySelector(".dropdown_content.web ").classList.remove("hide");
+  }
+
+  document
+    .querySelector(".dropdown_content.web")
+    .addEventListener("mouseout", hideDropdownContent);
+
+  function hideDropdownContent() {
+    console.log("hover på dropdown");
+    document.querySelector(".dropdown_content.web ").classList.add("hide");
+  }
 </script>
 
 <style>
@@ -196,6 +212,10 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
     flex-wrap: wrap;
     height: fit-content;
     padding: var(--space-xl) var(--space-m) var(--space-m) 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--bg-color);
   }
   .logo_header {
     width: 50%;
@@ -246,14 +266,13 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
 
   .dropdown_content {
     display: none;
-    align-items: flex-end;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: var(--space-s);
   }
 
   .dropdown:hover .dropdown_content {
     display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    gap: var(--space-s);
   }
 
   @media (min-width: 810px) {
@@ -292,7 +311,24 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
       gap: var(--space-l);
       height: auto;
       padding-bottom: unset;
-      align-items: flex-start;
+    }
+
+    .dropdown.web {
+      /* position: relative; */
+      overflow: hidden;
+    }
+
+    .dropdown_content.web {
+      position: absolute;
+
+      padding: 0 var(--space-m);
+      top: var(--space-4xl);
+      background-color: var(--bg-color);
+      z-index: 1;
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: end;
+      width: inherit;
     }
 
     .kurvIcon {

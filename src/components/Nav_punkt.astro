@@ -31,13 +31,14 @@ const { punkt, href, underline, dropdown } = Astro.props;
     font-family: var(--font-family-nav);
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-m);
-    word-wrap: unset;
+    /* word-wrap: unset; */
     letter-spacing: var(--letter-spacing-nav);
   }
   div {
     display: flex;
     flex-direction: row;
     gap: var(--space-3xs);
+    width: inherit;
   }
   div svg {
     fill: var(--nav-a-color);
