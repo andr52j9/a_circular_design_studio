@@ -5,11 +5,12 @@ import Dropdown from "../components/Dropdown.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Sample Kit | A Circurlar Design Studio">
-  <h2>Sample Kit</h2>
-  <img src="" alt="flueben" />
+<Layout title="Greb | A Circurlar Design Studio">
+  <img src="/icons/Brødkrumme.svg" alt="tilbage" />
+  <h2>Greb</h2>
+  <img src="/icons/Check.svg" alt="check_ikon" />
   <h6>14 dages fuld returret</h6>
-  <img src="" alt="flueben" />
+  <img src="/icons/Check.svg" alt="check_ikon" />
   <h6>håndlavede produkter</h6>
 
   <AntalButton
@@ -18,18 +19,32 @@ import Button from "../components/Button.astro";
     icon_plus="/icons/plus.svg"
     icon_minus="/icons/minus.svg"
   />
-  <h4>kr 249,00</h4>
+  <h4>kr 69,00</h4>
+
+  <Dropdown
+    variant="primaryDropdown"
+    tekst="Farve"
+    tekst="Dragonfruit drizzle"
+    tekst="Cloudy Peach"
+    tekst="Kiwi Currents"
+    tekst="Plum Puddles"
+    tekst="Blueberry Blizzard"
+    tekst="Mango Haze"
+    tekst="Papaya Rainbows"
+  />
 
   <Button variant="LagIKurvButton" tekst="Læg i kurv" />
   <p>
-    Vi har lavet nogle små sæt, med 4-5 forskellige farver, profiler og finish,
-    til jer der gerne vil have lidt mere følelse af materialet. Sættene er
-    selvfølgelig ikke ens, fordi de netop er lavet af produktionsrester, men der
-    vil være 4 til 5 farver i hver kasse.
+    Vores greb er perfekte, som et lille pift til den gamle kommode,
+    køkkenskabene eller som et alternativ til den traditionelle knage. Grebene
+    er simple i formgivningen og trækker tråde tilbage til 70erne og 80erne, men
+    vores skabes af genbrugsplast og med vores 7 forskellige farver, er der med
+    garanti noget der passer til netop dit hjem!
   </p>
-  <img src="sampleKit.webp" alt="sampleKit" />
-  <img src="sample-kit.webp" alt="sampleKit" />
-  <img src="sample-kit2.webp" alt="sampleKit" />
+  <img src="/img/greb.webp" alt="greb" />
+  <img src="/img/knage4.webp" alt="greb" />
+  <img src="/img/greb2.webp" alt="greb" />
+  <img src="/img/rundknage.webp" alt="greb" />
 
   <h5>Leveringstid</h5>
   <p>

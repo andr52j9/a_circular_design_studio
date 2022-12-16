@@ -5,11 +5,12 @@ import Dropdown from "../components/Dropdown.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Greb | A Circurlar Design Studio">
-  <h2>Greb</h2>
-  <img src="" alt="flueben" />
+<Layout title="Rektangulært sæt | A Circurlar Design Studio">
+  <img src="/icons/Brødkrumme.svg" alt="tilbage" />
+  <h2>Rektangulært sæt</h2>
+  <img src="/icons/Check.svg" alt="check_ikon" />
   <h6>14 dages fuld returret</h6>
-  <img src="" alt="flueben" />
+  <img src="/icons/Check.svg" alt="check_ikon" />
   <h6>håndlavede produkter</h6>
 
   <AntalButton
@@ -18,7 +19,7 @@ import Button from "../components/Button.astro";
     icon_plus="/icons/plus.svg"
     icon_minus="/icons/minus.svg"
   />
-  <h4>kr 69,00</h4>
+  <h4>kr 425,00</h4>
 
   <Dropdown
     variant="primaryDropdown"
@@ -31,19 +32,23 @@ import Button from "../components/Button.astro";
     tekst="Mango Haze"
     tekst="Papaya Rainbows"
   />
-
+  <Dropdown
+    variant="primaryDropdown"
+    tekst="Størrelse"
+    tekst="lille + mellemstor"
+    tekst="lille + stor"
+  />
   <Button variant="LagIKurvButton" tekst="Læg i kurv" />
   <p>
-    Vores greb er perfekte, som et lille pift til den gamle kommode,
-    køkkenskabene eller som et alternativ til den traditionelle knage. Grebene
-    er simple i formgivningen og trækker tråde tilbage til 70erne og 80erne, men
-    vores skabes af genbrugsplast og med vores 7 forskellige farver, er der med
-    garanti noget der passer til netop dit hjem!
+    Vores rektangulære bakker er designet, så den lille bakke kan passe ned i
+    den store og mellemstore bakke. Derfor kan i selvfølgelgelig købe et sæt af
+    dem. Sæt med mellemstor (16 x 26) og lille (6,5 x 13): 425 kroner Sæt med
+    stor(16 x 34) med lille (6,5 x 13): 550 kroner
   </p>
-  <img src="greb.webp" alt="greb" />
-  <img src="knage4.webp" alt="greb" />
-  <img src="greb2.webp" alt="greb" />
-  <img src="rundknage.webp" alt="greb" />
+  <img src="/img/Rektangulær-sæt.webp" alt="rektangulær-sæt" />
+  <img src="/img/regtangularBakker.webp" alt="rektangulær1" />
+  <img src="/img/regtangularBakke.webp" alt="rektangulær-bakke3" />
+  <img src="/img/Rektangulær-sæt.webp" alt="lrektangulær-bakke4" />
 
   <h5>Leveringstid</h5>
   <p>
