@@ -2,6 +2,9 @@
 import Cirkel from "../components/Cirkel.astro";
 import Layout from "../layouts/Layout.astro";
 import Streg from "../components/Streg.astro";
+import UndersideCard from "../components/UndersideCard.astro";
+import Carousel from "../components/Carousel.astro";
+import CalenderForside from "../components/CalenderForside.astro";
 
 const { title } = Astro.props;
 ---
@@ -29,10 +32,113 @@ const { title } = Astro.props;
       plast og kunstværker, tilbyder vi også kreative undervisningsforløb for
       institutioner, workshops for private og virksomheder og konsulentopgaver.
     </p>
+
+    <UndersideCard
+      farve="pink"
+      img="/img/workshop.webp"
+      underside="spical ordre"
+      link="spical-ordre"
+    />
+
+    <UndersideCard
+      farve="green"
+      img="/img/workshop.webp"
+      underside="workshop"
+      link="workshop"
+    />
+
+    <UndersideCard
+      farve="blue"
+      img="/img/workshop.webp"
+      underside="workshop"
+      link="workshop"
+    />
+
+    <UndersideCard
+      farve="yellow"
+      img="/img/workshop.webp"
+      underside="workshop"
+      link="workshop"
+    />
+  </section>
+  <section>
+    <h2>Nyheder</h2>
+    <Carousel />
+  </section>
+  <section>
+    <h2>Kalender</h2>
+    <div class="kalender_tekst">
+      <p>
+        Vi er hele tiden ude i landet og besøge forskellige markeder, folkemøder
+        og messer, for at vise vores produkter frem og ikke mindst tage en snak
+        om genanvendelse af plastik og alle de fantastiske muligheder der er!
+      </p>
+      <p>
+        Herunder er en kalender med vores planer for de næste 3 måneder, vi
+        prøver at holde den opdateret hver måned, men ellers kan du også finde
+        meget mere information, hvis du følger med på de sociale medier,
+        Instagram, Facebook og Linkedin.
+      </p>
+    </div>
+    <h2 class="måned">December</h2>
+    <div class="kalender_top">
+      <CalenderForside
+        Dato="9"
+        dag="Freadg"
+        sted="Nørrebrohallen"
+        sted="FLID julemarked"
+        tidspunkt="14.00-20.00"
+      />
+      <CalenderForside
+        Dato="10"
+        dag="Lørdag"
+        sted="Nørrebrohallen"
+        sted="FLID julemarked"
+        tidspunkt="10.00-17.00"
+      />
+      <CalenderForside
+        Dato="11"
+        dag="Søndag"
+        sted="Nørrebrohallen"
+        sted="FLID julemarked"
+        tidspunkt="10.00-16.00"
+      />
+    </div>
+    <h2 class="måned">Januar</h2>
+    <div class="kalender_bund">
+      <CalenderForside
+        Dato="28"
+        dag="Lørdag"
+        sted="Frederiksberg"
+        sted="København Design Marked"
+        tidspunkt="10.00-17.00"
+      />
+      <CalenderForside
+        Dato="29"
+        dag="Søndag"
+        sted="Frederiksberg"
+        sted="København Design Marked"
+        tidspunkt="10.00-17.00"
+      />
+    </div>
   </section>
 </Layout>
 
 <style>
+  .kalender_bund {
+    display: flex;
+    gap: var(--space-xl);
+  }
+  .kalender_top {
+    display: flex;
+    gap: var(--space-xl);
+  }
+  .måned h2 {
+    font-weight: var(--font-weight-exlight);
+  }
+  .kalender_tekst {
+    display: flex;
+  }
   :root {
     --grid-gutter: var(
       --space-s-s,
