@@ -1,0 +1,179 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AntalButton from "../components/AntalButton.astro";
+import Dropdown from "../components/Dropdown.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Cirkulær Bakke| A Circurlar Design Studio">
+  <main>
+    <section>
+      <img class="Brødkrumme" src="/icons/Brødkrumme.svg" alt="tilbage" />
+      <div class="main">
+        <div class="billeder">
+          <img src="/img/cirkulær1.webp" alt="rundeBakker" />
+          <div class="billedeGruppe">
+            <img src="/img/rundeBakker.webp" alt="rundeBakker" />
+            <img src="/img/cirkulær2.webp" alt="rundeBakker" />
+            <img src="/img/cirkulær3.webp" alt="rundbakke" />
+          </div>
+        </div>
+        <div class="info">
+          <h2>Cirkulær Bakke</h2>
+          <div class="e-jura">
+            <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+            <h6>14 dages fuld returret</h6>
+            <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+            <h6>håndlavede produkter</h6>
+          </div>
+
+          <div class="antal">
+            <AntalButton
+              tal="1"
+              tekst="Antal"
+              icon_plus="/icons/plus.svg"
+              icon_minus="/icons/minus.svg"
+            />
+            <h4>Fra kr 325,00</h4>
+          </div>
+          <div class="drop">
+            <Dropdown
+              variant="primaryDropdown"
+              tekst="Farve"
+              tekst="Dragonfruit drizzle"
+              tekst="Cloudy Peach"
+              tekst="Kiwi Currents"
+              tekst="Plum Puddles"
+              tekst="Blueberry Blizzard"
+              tekst="Mango Haze"
+              tekst="Papaya Rainbows"
+            />
+            <Dropdown
+              variant="primaryDropdown"
+              tekst="Størrelse"
+              tekst="lille"
+              tekst="stor"
+            />
+          </div>
+
+          <Button class="knap" variant="LagIKurvButton" tekst="Læg i kurv" />
+
+          <p class="produktInfomation">
+            Vores Cirkulære bakker er udover at være en fast del af vores
+            sortiment, også et af de første produkter vi lancerede. Bakkerne
+            passer i et hvert hjem, og kan benyttes til mange formål, om det så
+            er salt/peber/olie, et lys og en potteplante på spisebordet eller
+            sågar som serveringsbakke til kolde drinks, en varm sommerdag. De er
+            selvfølgelig lavet af 100% genanvendt plast, indsamlet i Danmark og
+            håndlavet på vores værksted i Skovlunde, lige uden for København.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bund">
+      <div>
+        <h5>Leveringstid</h5>
+        <p>
+          Alle vores produkter er håndlavede, hvilket betyder vi producerer
+          produkterne løbende, når de bestilles. <br />
+
+          Derfor vil der være ca 3-4 ugers levering, afhængig af størrelsen på
+          ordren. <br />
+
+          Hvis ordren haster, er i velkomne til at kontakte os, så skal vi prøve
+          at få den ført igennem hurtigst muligt.
+        </p>
+      </div>
+      <div>
+        <h5>Leveringsomkostninger</h5>
+        <p>
+          Fragt koster 99 kroner i hele Danmark pr podie. Ved større
+          bestillinger, kan i kontakte os, både for betaling via faktura og
+          samlet fragt. <br />
+
+          Du kan også vælge at afhente gratis i vores butik på Nørrebro i
+          København eller på vores værksted i Skovlunde.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding-left: 218px;
+    padding-right: 218px;
+  }
+  .Brødkrumme {
+    width: 161px;
+    padding-top: var(--space-3xl);
+  }
+
+  .info {
+  }
+
+  .billeder {
+    display: grid;
+    grid: 3fr;
+  }
+
+  .main {
+    display: flex;
+    gap: 140px;
+  }
+
+  .check {
+    width: 18px;
+    height: 12px;
+  }
+
+  .e-jura {
+    display: flex;
+    align-items: baseline;
+    padding-top: var(--space-m);
+  }
+
+  .antal {
+    display: flex;
+    align-items: baseline;
+    padding-top: var(--space-xl);
+  }
+
+  .drop {
+    display: flex;
+    align-items: baseline;
+    padding-top: var(--space-xl);
+  }
+
+  button {
+    padding-top: var(--space-xl);
+  }
+
+  .produktInfomation {
+    padding-top: var(--space-xl);
+  }
+
+  .img1 {
+    width: 630px;
+    height: 630px;
+  }
+
+  .img2,
+  .img3,
+  .img4 {
+    width: 190px;
+    height: 190px;
+  }
+
+  .billedeGruppe {
+    display: flex;
+    gap: 30px;
+    padding-top: var(--space-l);
+  }
+
+  .bund {
+    display: flex;
+    padding-top: var(--space-10xl);
+    padding-bottom: var(--space-10xl);
+  }
+</style>

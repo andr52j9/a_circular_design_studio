@@ -4,62 +4,90 @@ import WebshopCard from "../components/WebshopCard.astro";
 ---
 
 <Layout title="Køb Produkter | A Circurlar Design Studio">
-  <h1>Køb produkter</h1>
-  <WebshopCard
-    produktnavn="Stacks The Lamp"
-    prisfra="pris fra"
-    pris="kr 1.895,00"
-    img="/img/lampe.webp"
-  />
+  <div class="alt">
+    <h1>Køb produkter</h1>
+    <div class="cards">
+      <WebshopCard
+        link="Stacks-The-Lamp"
+        produktnavn="Stacks The Lamp"
+        prisfra="pris fra"
+        pris="kr 1.895,00"
+        img="/img/lampe.webp"
+      />
 
-  <WebshopCard
-    produktnavn="Cubes | Podium"
-    prisfra="pris fra"
-    pris="kr 2.795,00"
-    img="/img/cubes.webp"
-  />
+      <WebshopCard
+        link="Cubes-Podium"
+        produktnavn="Cubes | Podium"
+        prisfra="pris fra"
+        pris="kr 2.795,00"
+        img="./img/cubes.webp"
+      />
 
-  <WebshopCard
-    produktnavn="Rektangulære Bakker"
-    prisfra="pris fra"
-    pris="kr 100,00"
-    img="/img/rektangulær-bakke.webp"
-  />
+      <WebshopCard
+        link="Rektangulære-bakker"
+        produktnavn="Rektangulære Bakker"
+        prisfra="pris fra"
+        pris="kr 100,00"
+        img="/img/rektangulær-bakke.webp"
+      />
 
-  <WebshopCard
-    produktnavn="Rektangulært sæt"
-    prisfra="pris fra"
-    pris="kr 425,00"
-    img="/img/Rektangulær-sæt.webp"
-  />
+      <WebshopCard
+        link="rektangulær-sæt"
+        produktnavn="Rektangulært sæt"
+        prisfra="pris fra"
+        pris="kr 425,00"
+        img="/img/Rektangulær-sæt.webp"
+      />
 
-  <WebshopCard
-    produktnavn="Cirkulær bakke"
-    prisfra="pris fra"
-    pris="kr 325,00"
-    img="/img/rundeBakker.webp"
-  />
+      <WebshopCard
+        link="Cirkulær-bakke"
+        produktnavn="Cirkulær bakke"
+        prisfra="pris fra"
+        pris="kr 325,00"
+        img="/img/rundeBakker.webp"
+      />
 
-  <WebshopCard
-    produktnavn="Sample Kit"
-    prisfra="pris fra"
-    pris="kr 249,00"
-    img="/img/sampelKit.webp"
-  />
+      <WebshopCard
+        link="sample-kit"
+        produktnavn="Sample Kit"
+        prisfra="pris fra"
+        pris="kr 249,00"
+        img="/img/sampelKit.webp"
+      />
 
-  <WebshopCard
-    produktnavn="Greb"
-    prisfra="pris fra"
-    pris="kr 69,00"
-    img="/img/greb.webp"
-  />
+      <WebshopCard
+        link="greb"
+        produktnavn="Greb"
+        prisfra="pris fra"
+        pris="kr 69,00"
+        img="/img/greb.webp"
+      />
 
-  <WebshopCard
-    produktnavn="Knager"
-    prisfra="pris fra"
-    pris="kr 69,00"
-    img="/img/knage1.webp"
-  />
+      <WebshopCard
+        link="knager"
+        produktnavn="Knager"
+        prisfra="pris fra"
+        pris="kr 69,00"
+        img="/img/knage1.webp"
+      />
 
-  <WebshopCard produktnavn="Gavekort" img="/img/gavekort.webp" />
+      <WebshopCard produktnavn="Gavekort" img="/img/gavekort.webp" />
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: var(--space-10xl);
+  }
+
+  .alt {
+    padding-left: 218px;
+    padding-right: 218px;
+  }
+  h1 {
+    padding-bottom: var(--space-4xl);
+  }
+</style>
