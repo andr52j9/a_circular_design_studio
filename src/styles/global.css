@@ -150,7 +150,6 @@ a {
   --space-3xl: clamp(4.38rem, calc(4.23rem + 0.71vw), 5rem);
   --space-4xl: clamp(5.25rem, calc(5.08rem + 0.85vw), 6rem);
   --space-7xl: clamp(7.88rem, calc(7.62rem + 1.28vw), 9rem);
-
   --space-10xl: clamp(10.5rem, calc(10.16rem + 1.7vw), 12rem);
 
   /* font family */
