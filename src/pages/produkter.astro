@@ -12,7 +12,7 @@ import WebshopCard from "../components/WebshopCard.astro";
         produktnavn="Stacks The Lamp"
         prisfra="pris fra"
         pris="kr 1.895,00"
-        img="/img/lampe.webp"
+        img="/img/stacks_lampe.webp"
       />
 
       <WebshopCard
@@ -68,10 +68,15 @@ import WebshopCard from "../components/WebshopCard.astro";
         produktnavn="Knager"
         prisfra="pris fra"
         pris="kr 69,00"
-        img="/img/knage1.webp"
+        img="/img/knager.webp"
       />
 
-      <WebshopCard produktnavn="Gavekort" img="/img/gavekort.webp" />
+      <WebshopCard
+        produktnavn="Gavekort"
+        img="/img/gavekort.webp"
+        prisfra="pris fra"
+        pris="kr 50,00"
+      />
     </div>
   </div>
 </Layout>
@@ -79,6 +84,7 @@ import WebshopCard from "../components/WebshopCard.astro";
 <style>
   h1 {
     grid-column: 1/13;
+    color: var(--blue-light);
   }
   .cards_wrapper {
     grid-column: 1/13;
@@ -87,6 +93,7 @@ import WebshopCard from "../components/WebshopCard.astro";
     grid-template-columns: 1fr 1fr 1fr; */
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-10xl);
+    gap: var(--space-2xl);
+    justify-content: space-between;
   }
 </style>

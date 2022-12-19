@@ -8,13 +8,13 @@ import Button from "./Button.astro";
     <div class="container">
       <img src={img} alt={produktnavn} />
       <div class="overlay">
-        <Button variant="tertiary" tekst="Se produkt" />
+        <Button variant="overlay" tekst="Se produkt" />
       </div>
     </div>
     <div class="text_wrapper">
-      <h3 class="produktnavn">{produktnavn}</h3>
+      <h4 class="produktnavn">{produktnavn}</h4>
       <div class="pris">
-        <h6>{prisfra}</h6>
+        <h6 class="prisFra">{prisfra}</h6>
         <h5>{pris}</h5>
       </div>
     </div>
@@ -26,16 +26,13 @@ import Button from "./Button.astro";
     display: flex;
   }
 
-  img {
-    max-width: 450px;
-    max-height: 645px;
-  }
-
   .container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
+    max-width: 350px;
   }
 
   .overlay {
@@ -53,18 +50,26 @@ import Button from "./Button.astro";
 
   .text_wrapper {
     display: grid;
-    max-width: 450px;
-    max-height: 645px;
+    grid-auto-rows: 1fr;
   }
 
   .pris {
     display: flex;
     padding-top: var(--space-m);
     place-self: end;
+    align-items: baseline;
     gap: var(--space-2xs);
+  }
+
+  .pris h5 {
+    color: var(--text-color-dark);
   }
 
   .produktnavn {
     padding-top: var(--space-m);
+  }
+  .prisFra {
+    font-weight: var(--font-weigth-light);
+    color: var(--text-color-medium);
   }
 </style>

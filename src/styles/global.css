@@ -84,16 +84,21 @@ a {
   --color-pink-200: #fee0d3;
   --color-pink-300: #fecbbd;
   --color-pink-500: #fd9792;
+
+  --color-red-100: #fef1e9;
   --color-red-400: #ea7786;
   --color-red-500: #dd4d6d;
   --color-red-700: #be3862;
+
   --color-green-100: #edfaf2;
   --color-green-400: #a3cabc;
   --color-green-500: #7da89c;
   --color-green-700: #3e7874;
+
   --color-blue-400: #79bbe4;
   --color-blue-500: #5894c4;
   --color-blue-700: #3c70a4;
+
   --color-yellow-400: #f8dea3;
   --color-yellow-500: #d5b577;
   --color-yellow-700: #b28e52;
@@ -107,10 +112,12 @@ a {
   --color-greyscale-700: #201b1c;
 
   /* Color Alias */
+
   --pink-light: var(--color-pink-200);
   --pink: var(--color-pink-300);
   --pink-dark: var(--color-pink-500);
 
+  --red-exLight: var(--color-red-100);
   --red-light: var(--color-red-400);
   --red: var(--color-red-500);
   --red-dark: var(--color-red-700);
