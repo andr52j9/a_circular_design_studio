@@ -19,7 +19,8 @@ h6 {
 h1 {
   font-size: var(--font-size-4xl);
   font-stretch: condensed;
-  margin-bottom: var(--space-m);
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-xl);
   letter-spacing: var(--letter-spacing-heading);
   text-transform: uppercase;
 }
@@ -215,4 +216,22 @@ a {
   --border-s: solid 1px;
   --border-m: solid 1.5px;
   --border-l: solid 2px;
+
+  /* grid */
+  --grid-gutter: var(
+    --space-s-s,
+    clamp(0.88rem, calc(0.56rem + 1.31vw), 1.56rem)
+  );
+  --grid-max-width: 76.56rem;
+  --grid-columns: 12;
+}
+
+.section-grid,
+.grid {
+  margin: auto;
+  padding: 1.5rem;
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(20px, 80px));
+  max-width: var(--grid-max-width);
 }

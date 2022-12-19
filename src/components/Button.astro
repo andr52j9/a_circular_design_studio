@@ -17,9 +17,9 @@ const { tekst, variant } = Astro.props;
     color: var(--pink-dark);
   }
 
-  /* lyserød knap */
+  /* primary knap */
 
-  [data-variant="primaryButton"] {
+  [data-variant="primary"] {
     background-color: var(--pink-dark);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
@@ -28,7 +28,7 @@ const { tekst, variant } = Astro.props;
     border: var(--pink-dark) var(--border-l);
   }
 
-  [data-variant="primaryButton"]:hover {
+  [data-variant="primary"]:hover {
     background-color: var(--bg-color);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
@@ -37,12 +37,12 @@ const { tekst, variant } = Astro.props;
     border: var(--pink-dark) var(--border-l);
   }
 
-  [data-variant="primaryButton"]:hover h4 {
+  [data-variant="primary"]:hover h4 {
     color: var(--pink-dark);
   }
 
-  /* blå knap */
-  [data-variant="secondaryButton"] {
+  /* secondary knap */
+  [data-variant="secondary"] {
     background-color: var(--blue-dark);
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
@@ -51,11 +51,11 @@ const { tekst, variant } = Astro.props;
     border: var(--blue-dark) var(--border-l);
   }
 
-  [data-variant="secondaryButton"] h4 {
+  [data-variant="secondary"] h4 {
     color: var(--bg-color);
   }
 
-  [data-variant="secondaryButton"]:hover {
+  [data-variant="secondary"]:hover {
     color: var(--blue-dark);
     background-color: var(--bg-color);
     padding: var(--space-4xl);
@@ -64,7 +64,7 @@ const { tekst, variant } = Astro.props;
     border-radius: var(--border-radius-default);
     border: var(--blue-dark) var(--border-l);
   }
-  [data-variant="secondaryButton"]:hover h4 {
+  [data-variant="secondary"]:hover h4 {
     color: var(--blue-dark);
   }
 
@@ -95,24 +95,23 @@ const { tekst, variant } = Astro.props;
     color: var(--bg-color);
   }
 
-  /* webshop_cardButton*/
+  /* tertiary*/
 
-  [data-variant="webshopCardButton"] {
+  [data-variant="tertiary"] {
     color: var(--pink-light);
-    background-color: var(--bg-color);
+    background-color: transparent;
     padding: var(--space-4xl);
     padding-bottom: var(--space-xs);
     padding-top: var(--space-xs);
     border-radius: var(--border-radius-default);
     border: var(--pink-light) var(--border-l);
   }
-  [data-variant="webshopCardButton"]h4,
-  [data-variant="webshopCardButton"]:hover h4 {
+  [data-variant="tertiary"]h4 {
     color: var(--pink-light);
   }
 
-  /* GavekortButton */
-  [data-variant="GavekortButton"] {
+  /* tertiary knap */
+  [data-variant="tertiary"] {
     color: var(--green);
     background-color: var(--bg-color);
     padding: var(--space-3xl);
@@ -121,11 +120,11 @@ const { tekst, variant } = Astro.props;
     border-radius: 3px;
     border: var(--green) var(--border-l);
   }
-  [data-variant="GavekortButton"]h4 {
+  [data-variant="tertiary"]h4 {
     color: var(--green);
   }
 
-  [data-variant="GavekortButton"]:hover {
+  [data-variant="tertiary"]:hover {
     color: var(--green);
     background-color: var(--green-exLight);
     padding: var(--space-3xl);
@@ -134,17 +133,14 @@ const { tekst, variant } = Astro.props;
     border-radius: 3px;
     border: var(--green) var(--border-l);
   }
-  [data-variant="GavekortButton"]:hover h4 {
+  [data-variant="tertiary"]:hover h4 {
     color: var(--green);
   }
 
-  [data-variant="GavekortButton"]:focus {
-    color: var(--bg-color);
+  [data-variant="tertiary"]:focus {
     background-color: var(--green);
-    padding: var(--space-3xl);
-    padding-bottom: var(--space-2xs);
-    padding-top: var(--space-2xs);
-    border-radius: 3px;
-    border: var(--green) var(--border-l);
+  }
+  [data-variant="tertiary"]:focus h4 {
+    color: var(--bg-color);
   }
 </style>

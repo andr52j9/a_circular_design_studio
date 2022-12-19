@@ -7,8 +7,9 @@ import Button from "./Button.astro";
   <article class="card_wrapper">
     <div class="container">
       <img src={img} alt={produktnavn} />
-      <div class="overlay"></div>
-      <div class="btn"><Button variant="webshopCardButton" /></div>
+      <div class="overlay">
+        <Button variant="tertiary" tekst="Se produkt" />
+      </div>
     </div>
     <div class="text_wrapper">
       <h3 class="produktnavn">{produktnavn}</h3>
@@ -37,23 +38,17 @@ import Button from "./Button.astro";
     justify-content: center;
   }
 
-  .container:hover .btn {
-    display: block;
-  }
-
-  .btn {
+  .overlay {
     position: absolute;
     display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--overlay);
   }
-
-  .btn:hover {
-    position: relative;
-    display: none;
-  }
-
-  img:hover {
-    opacity: 50%;
-    background-color: var(--color-greyscale-400: );
+  .container:hover .overlay {
+    display: flex;
   }
 
   .text_wrapper {

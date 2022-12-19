@@ -4,9 +4,9 @@ import WebshopCard from "../components/WebshopCard.astro";
 ---
 
 <Layout title="Køb Produkter | A Circurlar Design Studio">
-  <div class="alt">
+  <div class="grid">
     <h1>Køb produkter</h1>
-    <div class="cards">
+    <div class="cards_wrapper">
       <WebshopCard
         link="Stacks-The-Lamp"
         produktnavn="Stacks The Lamp"
@@ -77,17 +77,16 @@ import WebshopCard from "../components/WebshopCard.astro";
 </Layout>
 
 <style>
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-bottom: var(--space-10xl);
-  }
-
-  .alt {
-    padding-left: 218px;
-    padding-right: 218px;
-  }
   h1 {
-    padding-bottom: var(--space-4xl);
+    grid-column: 1/13;
+  }
+  .cards_wrapper {
+    grid-column: 1/13;
+    place-items: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-10xl);
   }
 </style>
