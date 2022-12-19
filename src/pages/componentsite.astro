@@ -12,9 +12,16 @@ import Carousel from "../components/Carousel.astro";
 import AntalButton from "../components/AntalButton.astro";
 import CalenderForside from "../components/CalenderForside.astro";
 import KurvCard from "../components/KurvCard.astro";
+import Singleview from "../layouts/Singleview.astro";
 ---
 
 <Layout title="Komponenter | A Circurlar Design Studio">
+  <Singleview
+    billede1="/img/lampe.webp"
+    billede2="/img/lampe1.webp"
+    billede3="/img/lampe2.webp"
+    billede4="/img/lampe3.webp"
+  />
   <Carousel />
   <Calendar />
   <Dropdown
