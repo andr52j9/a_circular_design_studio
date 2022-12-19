@@ -68,36 +68,9 @@ const { tekst, variant } = Astro.props;
     color: var(--blue-dark);
   }
 
-  /* læg i kurv */
+  /* overlay*/
 
-  [data-variant="LagIKurvButton"] {
-    background-color: var(--blue-light);
-    padding: var(--space-4xl);
-    padding-bottom: var(--space-xs);
-    padding-top: var(--space-xs);
-    border-radius: 3px;
-    border: var(--blue-light) var(--border-l);
-  }
-
-  [data-variant="LagIKurvButton"] h4 {
-    color: var(--bg-color);
-  }
-
-  [data-variant="LagIKurvButton"]:hover {
-    background-color: var(--blue-dark);
-    padding: var(--space-4xl);
-    padding-bottom: var(--space-xs);
-    padding-top: var(--space-xs);
-    border-radius: 3px;
-    border: var(--blue-dark) var(--border-l);
-  }
-  [data-variant="LagIKurvButton"]:hover h4 {
-    color: var(--bg-color);
-  }
-
-  /* tertiary*/
-
-  [data-variant="tertiary"] {
+  [data-variant="overlay"] {
     color: var(--pink-light);
     background-color: transparent;
     padding: var(--space-4xl);
@@ -106,7 +79,11 @@ const { tekst, variant } = Astro.props;
     border-radius: var(--border-radius-default);
     border: var(--pink-light) var(--border-l);
   }
-  [data-variant="tertiary"]h4 {
+  [data-variant="overlay"]h4 {
+    color: var(--pink-light);
+  }
+
+  [data-variant="overlay"]:hover h4 {
     color: var(--pink-light);
   }
 
