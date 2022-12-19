@@ -26,7 +26,6 @@ const { punkt, href, underline, dropdown } = Astro.props;
   a {
     color: var(--nav-a-color);
     text-decoration: none;
-    display: inline-block;
     position: relative;
     font-family: var(--font-family-nav);
     font-weight: var(--font-weight-medium);
@@ -39,6 +38,7 @@ const { punkt, href, underline, dropdown } = Astro.props;
     flex-direction: row;
     gap: var(--space-3xs);
     width: inherit;
+    justify-content: flex-end;
   }
   div svg {
     fill: var(--nav-a-color);
