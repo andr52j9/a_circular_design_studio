@@ -2,7 +2,25 @@
 const { tekst, icon } = Astro.props;
 ---
 
-<ul class="breadcrumb">
-    <img src={icon} alt="">
-    <li><a href="#"><h6>{tekst}</h6></a></li>
-  </ul>
+<div class="breadcrumb">
+    <img class="icon" src={icon} alt="">
+    <a href="produkter"><h6>{tekst}</h6></a>
+</div>
+
+  <style>
+.icon {
+    width: 35px;
+    height: 20px;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+}
+
+h6 {
+    color: var(--color-greyscale-400);
+}
+
+  </style>
