@@ -1,10 +1,85 @@
+---
+import AntalButton from "../components/AntalButton.astro";
+import Dropdown from "../components/Dropdown.astro";
+import Button from "../components/Button.astro";
+const { billede1, billede2, billede3, billede4 } = Astro.props;
+---
+
 <section class="section_grid">
   <div class="billedeGalleri">
-    <img class="img1" src="/img/lampe.webp" alt="stor_cubes" />
+    <img class="img1" src={billede1} alt="stor_cubes" />
     <div class="billedeGruppe">
-      <img class="img2" src="/img/lampe1.webp" alt="lampe1" />
-      <img class="img3" src="/img/lampe2.webp" alt="lampe2" />
-      <img class="img4" src="/img/lampe3.webp" alt="lampe3" />
+      <img class="img2" src={billede2} alt="lampe1" />
+      <img class="img3" src={billede3} alt="lampe2" />
+      <img class="img4" src={billede4} alt="lampe3" />
     </div>
   </div>
+
+  <div class="info">
+    <h2>Stacks The Lamp</h2>
+
+    <div class="e-jura">
+      <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+      <h6>14 dages fuld returret</h6>
+      <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+      <h6>håndlavede produkter</h6>
+    </div>
+
+    <div class="antal">
+      <AntalButton
+        tal="1"
+        tekst="Antal"
+        icon_plus="/icons/plus.svg"
+        icon_minus="/icons/minus.svg"
+      />
+      <h4>kr 1.895,000</h4>
+    </div>
+    <div class="drop">
+      <Dropdown
+        variant="primaryDropdown"
+        tekst="Farve"
+        tekst="Dragonfruit drizzle"
+        tekst="Cloudy Peach"
+        tekst="Kiwi Currents"
+        tekst="Plum Puddles"
+        tekst="Blueberry Blizzard"
+        tekst="Mango Haze"
+        tekst="Papaya Rainbows"
+      />
+      <Dropdown
+        variant="primaryDropdown"
+        tekst="Størrelse"
+        tekst="lille"
+        tekst="stor"
+      />
+    </div>
+
+    <Button class="knap" variant="sencondary" tekst="Læg i kurv" />
+
+    <p class="produktInfomation">
+      Stacks "The Lamp" er vores første bud på en bordlampe, der som alle vores
+      andre produkter er skabt af geanvendt plast, og kommer i fem friske
+      farver, der vil passe i de fleste hjem! Lampen er lavet i samarbejde med
+      KS Lightning Group, der snart i 50 år har produceret lamper og tilbehør i
+      Danmark. KS lightning Group har stået for fremstillingen af lampeskærme og
+      elektronikken, og vi har gjort hvad vi er bedst, så vi har haft fokus på
+      design og cirkulær produktion, og det betyder selvfølgelig at lampen er
+      lavet af 100% genanvendt plast.
+    </p>
+  </div>
 </section>
+
+<style>
+  .check {
+    width: var(--space-m);
+    height: var(--space-m);
+  }
+  .e-jura {
+    display: flex;
+    align-items: center;
+    padding-top: var(--space-m);
+  }
+  h6 {
+    font-weight: var(--font-weight-);
+  }
+</style>
