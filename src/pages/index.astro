@@ -219,14 +219,7 @@ const { title } = Astro.props;
     grid-column: 1/9;
     gap: var(--space-2xl);
   }
-  :root {
-    --grid-gutter: var(
-      --space-s-s,
-      clamp(0.88rem, calc(0.56rem + 1.31vw), 1.56rem)
-    );
-    --grid-max-width: 76.56rem;
-    --grid-columns: 12;
-  }
+
   .splash_text {
     grid-column: span 9;
     align-self: center;
@@ -235,7 +228,6 @@ const { title } = Astro.props;
     margin: auto;
     padding: 1.5rem;
     column-gap: var(--grid-gutter);
-
     display: grid;
     grid-template-columns: repeat(12, minmax(20px, 80px));
     max-width: var(--grid-max-width);
