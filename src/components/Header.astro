@@ -5,213 +5,110 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
 ---
 
 <header>
-  <nav class="">
+  <div class="iconer_nav_wrapper">
     <a class="logo_header" href="index"><img src="/logo.svg" alt="" /></a>
-    <div class="nav_content_wrapper">
-      <div class="kurvIcon">
-        <Kurv />
-      </div>
-      <div class="burgermenuIcon">
-        <BurgermenuIcon />
-      </div>
-
-      <div class="nav_content web hide">
-        <div class="dropdown web">
+    <div class="kurvIcon">
+      <Kurv />
+    </div>
+    <div class="burgermenuIcon">
+      <BurgermenuIcon />
+    </div>
+    <nav class="hide">
+      <ul>
+        <li class="dropdown">
           <NavPunkt
             punkt="Til virksomheder"
             underline="lightyellow"
             dropdown={true}
           />
-          <div class="dropdown_content web">
-            <NavPunkt
-              punkt="Workshop"
-              underline="green"
-              href="workshop"
-              dropdown={false}
-            />
-            <NavPunkt
-              punkt="Rådgivning"
-              underline="lightblue"
-              href="raadgivning"
-              dropdown={false}
-            />
-          </div>
-        </div>
-
-        <div class="dropdown web">
+          <ul class="dropdown-menu">
+            <li>
+              <NavPunkt
+                punkt="Workshop"
+                underline="green"
+                href="workshop"
+                dropdown={false}
+              />
+            </li>
+            <li>
+              <NavPunkt
+                punkt="Rådgivning"
+                underline="lightblue"
+                href="raadgivning"
+                dropdown={false}
+              />
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
           <NavPunkt punkt="Om os" underline="red" dropdown={true} />
-          <div class="dropdown_content web">
-            <NavPunkt
-              punkt="Teamet bag"
-              underline="yellow"
-              href="teamet-bag"
-              dropdown={false}
-            />
-            <NavPunkt
-              punkt="Cirkulær økonomi"
-              underline="darkpink"
-              href="cirkulaeroekonomi"
-              dropdown={false}
-            />
-
-            <NavPunkt
-              punkt="Forhandler"
-              underline="green"
-              href="forhandler"
-              dropdown={false}
-            />
-          </div>
-        </div>
-
-        <NavPunkt
-          punkt="Kontakt"
-          underline="darkblue"
-          href="kontakt"
-          dropdown={false}
-        />
-
-        <div class="dropdown web noMouse">
+          <ul class="dropdown-menu">
+            <li>
+              <NavPunkt
+                punkt="Teamet bag"
+                underline="yellow"
+                href="teamet-bag"
+                dropdown={false}
+              />
+            </li>
+            <li>
+              <NavPunkt
+                punkt="Cirkulær økonomi"
+                underline="darkpink"
+                href="cirkulaeroekonomi"
+                dropdown={false}
+              />
+            </li>
+            <li>
+              <NavPunkt
+                punkt="Forhandler"
+                underline="green"
+                href="forhandler"
+                dropdown={false}
+              />
+            </li>
+          </ul>
+        </li>
+        <li>
+          <NavPunkt
+            punkt="Kontakt"
+            underline="darkblue"
+            href="kontakt"
+            dropdown={false}
+          />
+        </li>
+        <li class="dropdown">
           <NavPunkt punkt="Shop" underline="lightgreen" dropdown={true} />
-          <div class="dropdown_content web">
-            <NavPunkt
-              punkt="Køb produkter"
-              underline="lightblue"
-              href="produkter"
-              dropdown={false}
-            />
-            <NavPunkt
-              punkt="Special ordre"
-              underline="darkpink"
-              href="special-ordre"
-              dropdown={false}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <div class="nav_content_burger hide">
-    <div class="dropdown">
-      <NavPunkt
-        punkt="Til virksomheder"
-        underline="yellow"
-        href="#"
-        dropdown={true}
-      />
-      <div class="dropdown_content">
-        <NavPunkt
-          punkt="Workshop"
-          underline="red"
-          href="workshop"
-          dropdown={false}
-        />
-        <NavPunkt
-          punkt="Rådgivning"
-          underline="blueLight"
-          href="raadgivning"
-          dropdown={false}
-        />
-
-        <NavPunkt
-          punkt="Projekter"
-          underline="greenDark"
-          href="projekter"
-          dropdown={false}
-        />
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <NavPunkt
-        punkt="Om os"
-        underline="green"
-        href="componentsite"
-        dropdown={true}
-      />
-      <div class="dropdown_content">
-        <NavPunkt
-          punkt="Workshop"
-          underline="red"
-          href="workshop"
-          dropdown={false}
-        />
-        <NavPunkt
-          punkt="Rådgivning"
-          underline="blueLight"
-          href="raadgivning"
-          dropdown={false}
-        />
-
-        <NavPunkt
-          punkt="Projekter"
-          underline="greenDark"
-          href="projekter"
-          dropdown={false}
-        />
-      </div>
-    </div>
-
-    <NavPunkt punkt="Kontakt" underline="red" href="#" dropdown={false} />
-
-    <div class="dropdown">
-      <NavPunkt punkt="Shop" underline="blue" href="#" dropdown={true} />
-      <div class="dropdown_content">
-        <NavPunkt
-          punkt="Workshop"
-          underline="red"
-          href="workshop"
-          dropdown={false}
-        />
-        <NavPunkt
-          punkt="Rådgivning"
-          underline="blueLight"
-          href="raadgivning"
-          dropdown={false}
-        />
-
-        <NavPunkt
-          punkt="Projekter"
-          underline="greenDark"
-          href="projekter"
-          dropdown={false}
-        />
-      </div>
-    </div>
+          <ul class="dropdown-menu">
+            <li>
+              <NavPunkt
+                punkt="Køb produkter"
+                underline="lightblue"
+                href="produkter"
+                dropdown={false}
+              />
+            </li>
+            <li>
+              <NavPunkt
+                punkt="Special ordre"
+                underline="darkpink"
+                href="special-ordre"
+                dropdown={false}
+              />
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
-
-<script>
-  document
-    .querySelector(".burgermenuIcon")
-    .addEventListener("click", showBurgerContent);
-  function showBurgerContent() {
-    console.log("der klikkes");
-    document.querySelector(".nav_content_burger ").classList.toggle("hide");
-  }
-  document
-    .querySelector(".dropdown.web")
-    .addEventListener("mouseover", showDropdownContent);
-  function showDropdownContent() {
-    console.log("hover på dropdown");
-    document.querySelector(".dropdown_content.web ").classList.remove("hide");
-  }
-
-  document
-    .querySelector(".dropdown_content.web")
-    .addEventListener("mouseout", hideDropdownContent);
-
-  function hideDropdownContent() {
-    console.log("hover på dropdown");
-    document.querySelector(".dropdown_content.web ").classList.add("hide");
-  }
-</script>
 
 <style>
   header {
     display: flex;
-    flex-wrap: wrap;
-    height: fit-content;
-    padding: var(--space-xl) var(--space-m) var(--space-m) 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xl) var(--space-l) var(--space-m) 0;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -219,120 +116,119 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
   }
   .logo_header {
     width: 50%;
+    margin-right: var(--space-7xl);
   }
-
-  .nav_content_wrapper {
+  .iconer_nav_wrapper {
     display: flex;
-    flex-direction: row;
-    gap: var(--space-l);
-  }
-
-  .nav_content_burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-bottom: var(--space-3xl);
-    gap: var(--space-l);
-    height: 84vh;
-    width: 100%;
-  }
-
-  .nav_content_burger a {
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  .hide {
-    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: var(--space-s); */
   }
 
   nav {
+    height: 85vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
     width: 100%;
   }
-  .dropdown {
-    background-color: var(--bg-color);
+
+  header nav ul {
+    align-self: flex-end;
     display: flex;
+    list-style: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
-    gap: var(--space-m);
-    height: fit-content;
+    padding-bottom: var(--space-m);
+    gap: var(--space-l);
   }
 
-  .dropdown_content {
+  header nav ul li.dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+  header nav ul li.dropdown {
+    position: relative;
+    justify-self: flex-end;
+  }
+
+  header nav ul li .dropdown-menu {
     display: none;
+    /* position: absolute; */
+    /* top: 100%; */
+    right: 0;
+    z-index: 1;
+    padding: var(--space-s) var(--space-m);
+    background-color: var(--bg-color);
+    min-width: 160px;
+    align-items: flex-end;
     flex-direction: column;
-    align-self: flex-end;
     gap: var(--space-s);
   }
 
-  .dropdown:hover .dropdown_content {
-    display: flex;
+  header nav ul li .dropdown-menu li {
+    white-space: nowrap;
   }
 
+  header nav ul li .dropdown-menu li a {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
   @media (min-width: 810px) {
-    header {
-      position: sticky;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: var(--space-xl) 3.75rem var(--space-m) 0;
-    }
-    nav {
-      justify-content: space-between;
-      gap: var(--space-l);
-      align-items: flex-start;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: var(--space-m);
-    }
     .logo_header {
       width: auto;
+      margin-right: var(--space-7xl);
     }
-    .nav_content_wrapper {
-      display: flex;
-      flex-direction: row;
-      gap: var(--space-l);
+    .iconer_nav_wrapper {
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
-
     .burgermenuIcon {
       display: none;
     }
 
-    .nav_content {
+    nav {
+      height: fit-content;
+      width: fit-content;
+      margin-left: var(--space-7xl);
+    }
+
+    nav ul {
       display: flex;
-      flex-direction: row;
-      gap: var(--space-l);
-      height: auto;
-      padding-bottom: unset;
-    }
-
-    .dropdown.web {
-      /* position: relative; */
-      overflow: hidden;
-    }
-
-    .dropdown_content.web {
-      position: absolute;
-
-      padding: 0 var(--space-m);
-      top: var(--space-4xl);
-      background-color: var(--bg-color);
-      z-index: 1;
-      justify-content: flex-end;
-      align-items: flex-end;
-      text-align: end;
-      width: inherit;
     }
 
     .kurvIcon {
       order: 2;
+      margin-left: var(--space-l);
+    }
+    .hide {
+      display: flex;
+    }
+
+    header nav ul {
+      display: flex;
+      list-style: none;
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+
+    header nav ul li .dropdown-menu {
+      display: none;
+      position: absolute;
     }
   }
 </style>
+
+<script>
+  document.querySelector(".burgermenuIcon").addEventListener("click", showNav);
+  function showNav() {
+    console.log("der klikkes på burgermenu icon");
+    document.querySelector("nav").classList.toggle("hide");
+  }
+</script>
