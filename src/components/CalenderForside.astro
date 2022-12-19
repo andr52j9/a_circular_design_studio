@@ -1,23 +1,27 @@
 ---
-const { Dato, dag, tidspunkt, sted } = Astro.props;
+const { dato, dag, tidspunkt, sted, location, farve } = Astro.props;
 ---
 
-<article>
+<article class={farve}>
   <div class="top">
     <div class="wrapper">
-      <h3>{Dato}</h3>
+      <h3>{dato}</h3>
       <h6 class="dag">{dag}</h6>
     </div>
   </div>
 
-  <h6 class="sted">{sted}</h6>
+  <h6 class="sted">{location}</h6>
   <h4>{sted}</h4>
-  <h5>{tidspunkt}</h5>
+  <h5 class="tid">{tidspunkt}</h5>
 </article>
 <style>
   article {
     display: flex;
     flex-direction: column;
+  }
+
+  h4 {
+    max-width: 15ch;
   }
 
   h6,
@@ -30,23 +34,41 @@ const { Dato, dag, tidspunkt, sted } = Astro.props;
     margin-top: var(--space-2xs);
     height: 3px;
     top: 5px;
-    background-color: var(--yellow);
     transition: all 0.3s;
     width: 200px;
   }
 
-  .sted {
-    padding-top: var(--space-xl);
+  .lightYellow .top::after {
+    background-color: var(--yellow-light);
+  }
+  .lightRed .top::after {
+    background-color: var(--red-light);
   }
 
-  h5 {
-    font-weight: var(--font-weight-light);
+  .lightBlue .top::after {
+    background-color: var(--blue-light);
   }
-  h6 {
+
+  .lightGreen .top::after {
+    background-color: var(--green-light);
+  }
+
+  .lightPink .top::after {
+    background-color: var(--pink-light);
+  }
+
+  h5.tid {
     font-weight: var(--font-weight-light);
+    font-stretch: unset;
+  }
+  h6.sted {
+    padding-top: var(--space-xl);
+    font-weight: var(--font-weight-light);
+    letter-spacing: var(--letter-spacing-sted);
   }
   .dag {
     padding-left: var(--space-2xs);
+    font-weight: var(--font-weight-light);
   }
   .wrapper {
     display: flex;

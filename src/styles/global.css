@@ -28,6 +28,7 @@ h2 {
   font-size: var(--font-size-3xl);
   font-stretch: condensed;
   text-transform: uppercase;
+  margin-bottom: var(--space-xl);
 }
 h3 {
   font-size: var(--font-size-2xl);
@@ -138,6 +139,8 @@ a {
   --kurv-color: var(--color-greyscale-500);
   --kurv-color-hover: var(--color-greyscale-600);
 
+  --overlay: #7c7c7c50;
+
   /* Spacing */
   --space-3xs: clamp(0.25rem, calc(0.25rem + 0vw), 0.25rem);
   --space-2xs: clamp(0.44rem, calc(0.42rem + 0.11vw), 0.5rem);
@@ -194,6 +197,7 @@ a {
   --letter-spacing-dense: -1px;
   --letter-spacing-heading: 0.75px;
   --letter-spacing-nav: 1px;
+  --letter-spacing-sted: 1px;
   --letter-spacing-double: 2px;
 
   /* line height */

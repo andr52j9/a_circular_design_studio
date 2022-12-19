@@ -17,6 +17,7 @@ const { underside, img, farve, link } = Astro.props;
   }
 
   .card_wrapper img {
+    object-fit: cover;
     width: 300px;
     height: 440px;
   }
@@ -51,5 +52,9 @@ const { underside, img, farve, link } = Astro.props;
 
   .green {
     background-color: var(--green-dark);
+  }
+
+  .yellow {
+    background-color: var(--yellow);
   }
 </style>
