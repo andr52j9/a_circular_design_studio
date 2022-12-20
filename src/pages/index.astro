@@ -6,6 +6,7 @@ import UndersideCard from "../components/UndersideCard.astro";
 import Carousel from "../components/Carousel.astro";
 import CalenderForside from "../components/CalenderForside.astro";
 import InstaCard from "../components/InstaCard.astro";
+import Button from "../components/Button.astro";
 
 const { title } = Astro.props;
 ---
@@ -153,183 +154,121 @@ const { title } = Astro.props;
     </div>
   </section>
 
-  <!-- cookieboks -->
-  <div
-    id="newletter"
-    class="fixed top-0 grid hidden h-full w-screen bg-secondary bg-opacity-80"
-  >
-    <div
-      class="container grid h-2/3 w-1/2 justify-center place-self-center border-2 border-solid border-primary bg-white px-8"
-    >
-      <div
-        id="luk"
-        class="mt-6 cursor-pointer text-right text-3xl font-extralight text-secondary"
-      >
-        x
-      </div>
-      <p class="self-end text-3xl font-medium text-secondary">
-        Sign op til vores nyhedsbrev
-      </p>
-      <p class="text-6xl font-bold text-primary">20% på dit første køb</p>
-      <div class="flex gap-6 self-start">
-        <form class="" action="">
-          <input
-            class="w-96 border-2 border-primary"
-            type="text"
-            placeholder="Dinmail@mail.com"
-            name="mail"
-          />
-        </form>
-        <button
-          id="submit"
-          class="h-[44px] w-1/3 bg-primary font-bold uppercase text-white hover:border-2 hover:border-solid hover:border-primary hover:bg-white hover:text-primary"
-        >
-          Subscribe
-        </button>
-      </div>
-    </div>
-  </div>
+  <style>
+    .insta {
+      margin-bottom: var(--space-s);
+    }
+    .insta_grid {
+      grid-column: 1/13;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: repeat(2, minmax(200px, 250px));
+      gap: var(--space-l);
+      overflow: hidden;
+      place-content: center;
+    }
+
+    .billede1,
+    .billede2,
+    .billede3,
+    .billede4,
+    .billede5 {
+      object-fit: cover;
+      overflow: hidden;
+      display: flex;
+    }
+    .billede1 {
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+
+    .billede2 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    .billede3 {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+
+    .billede4 {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    .billede5 {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+
+    .kalender {
+      grid-column: 5/13;
+      grid-row: 3;
+    }
+    .datoer {
+      display: flex;
+      gap: var(--space-4xl);
+      padding-left: var(--space-m);
+    }
+
+    .måned {
+      font-size: var(--font-size-xl);
+      letter-spacing: var(--letter-spacing-double);
+      font-weight: var(--font-weight-exlight);
+      padding: var(--space-3xl) 0 var(--space-s) 0;
+    }
+    .kalender_tekst {
+      display: flex;
+      grid-column: 1/9;
+      gap: var(--space-2xl);
+    }
+
+    .splash_text {
+      grid-column: span 9;
+      align-self: center;
+    }
+    .section-grid {
+      margin: auto;
+      padding: 1.5rem;
+      column-gap: var(--grid-gutter);
+      display: grid;
+      grid-template-columns: repeat(12, minmax(20px, 80px));
+      max-width: var(--grid-max-width);
+    }
+
+    h2 {
+      grid-column: span 8;
+    }
+
+    /* styling for sektion 2 | Hvad tilbyder vi */
+
+    .medStreg {
+      margin-bottom: var(--space-2xs);
+    }
+
+    .streg_wrapper {
+      grid-row: 2;
+      grid-column-start: 2;
+      grid-column-end: 8;
+      overflow: hidden;
+      margin-bottom: var(--space-m);
+      height: fit-content;
+    }
+    .section2 p {
+      grid-column: span 6;
+      grid-row: 3;
+    }
+
+    .undersider {
+      margin-top: var(--space-2xl);
+      grid-column: 1/13;
+      grid-row: 4/5;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    /* styling for sektion 4 | Hvad tilbyder vi */
+  </style>
 </Layout>
-
-<script>
-  // cookieboks
-  const luk = document.querySelector("#luk");
-  const submit = document.querySelector("#submit");
-  const newsletterBoks = document.querySelector("#newletter");
-
-  window.setTimeout(timer, 10000);
-
-  function timer() {
-    console.log("timer i gang ");
-    newsletterBoks.classList.remove("hidden");
-    luk.addEventListener("click", lukNewsletter);
-    submit.addEventListener("click", lukNewsletter);
-  }
-
-  function lukNewsletter() {
-    console.log("click virker ");
-    newsletterBoks.classList.add("hidden");
-  }
-</script>
-
-<style>
-  .pop_up {
-    display: block;
-  }
-
-  .insta {
-    margin-bottom: var(--space-s);
-  }
-  .insta_grid {
-    grid-column: 1/13;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(2, minmax(200px, 250px));
-    gap: var(--space-l);
-    overflow: hidden;
-    place-content: center;
-  }
-
-  .billede1,
-  .billede2,
-  .billede3,
-  .billede4,
-  .billede5 {
-    object-fit: cover;
-    overflow: hidden;
-    display: flex;
-  }
-  .billede1 {
-    grid-column: 1/2;
-    grid-row: 1/3;
-  }
-
-  .billede2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-
-  .billede3 {
-    grid-column: 3/4;
-    grid-row: 1/2;
-  }
-
-  .billede4 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .billede5 {
-    grid-column: 3/4;
-    grid-row: 2/3;
-  }
-
-  .kalender {
-    grid-column: 5/13;
-    grid-row: 3;
-  }
-  .datoer {
-    display: flex;
-    gap: var(--space-4xl);
-    padding-left: var(--space-m);
-  }
-
-  .måned {
-    font-size: var(--font-size-xl);
-    letter-spacing: var(--letter-spacing-double);
-    font-weight: var(--font-weight-exlight);
-    padding: var(--space-3xl) 0 var(--space-s) 0;
-  }
-  .kalender_tekst {
-    display: flex;
-    grid-column: 1/9;
-    gap: var(--space-2xl);
-  }
-
-  .splash_text {
-    grid-column: span 9;
-    align-self: center;
-  }
-  .section-grid {
-    margin: auto;
-    padding: 1.5rem;
-    column-gap: var(--grid-gutter);
-    display: grid;
-    grid-template-columns: repeat(12, minmax(20px, 80px));
-    max-width: var(--grid-max-width);
-  }
-
-  h2 {
-    grid-column: span 8;
-  }
-
-  /* styling for sektion 2 | Hvad tilbyder vi */
-
-  .medStreg {
-    margin-bottom: var(--space-2xs);
-  }
-
-  .streg_wrapper {
-    grid-row: 2;
-    grid-column-start: 2;
-    grid-column-end: 8;
-    overflow: hidden;
-    margin-bottom: var(--space-m);
-    height: fit-content;
-  }
-  .section2 p {
-    grid-column: span 6;
-    grid-row: 3;
-  }
-
-  .undersider {
-    margin-top: var(--space-2xl);
-    grid-column: 1/13;
-    grid-row: 4/5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  /* styling for sektion 4 | Hvad tilbyder vi */
-</style>
