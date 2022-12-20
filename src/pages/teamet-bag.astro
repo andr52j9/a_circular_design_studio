@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TeametBag from "../components/TeametBag.astro";
+import Streg from "../components/Streg.astro";
 ---
 
 <Layout title="Forside | A Circurlar Design Studio">
@@ -15,7 +16,7 @@ import TeametBag from "../components/TeametBag.astro";
     kontakt="kontakt"
     mail="andreaszacho@acirculardesignstudio.com"
   />
-
+  <div class="streg_wrapper"><Streg fill="var(--red)" /></div>
   <TeametBag
     img="/img/kasper.webp"
     navn="KASPER HOLM JENSEN"
@@ -25,7 +26,7 @@ import TeametBag from "../components/TeametBag.astro";
     kontakt="kontakt"
     mail="kasperholmjensen@hotmail.com"
   />
-
+  <div class="streg_wrapper"><Streg fill="var(--green)" /></div>
   <TeametBag
     img="/img/wilhelm_andreas.webp"
     navn="WILLEM ANDREAS STIBOLT"
