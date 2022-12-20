@@ -300,7 +300,7 @@ const { title } = Astro.props;
   }
 
   h2 {
-    grid-column: span 8;
+    grid-column: 1/13;
   }
 
   /* styling for sektion 2 | Hvad tilbyder vi */
@@ -330,6 +330,10 @@ const { title } = Astro.props;
     flex-direction: row;
     justify-content: space-between;
   }
-
+  @media (min-width: 810px) {
+    .section-grid {
+      margin-bottom: var(--space-10xl);
+    }
+  }
   /* styling for sektion 4 | Hvad tilbyder vi */
 </style>

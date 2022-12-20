@@ -237,10 +237,11 @@ a {
 .grid {
   margin: auto;
   padding: 1.5rem;
-  column-gap: var(--grid-gutter);
+  column-gap: var(--space-s);
   display: grid;
-  grid-template-columns: repeat(12, minmax(20px, 80px));
+  grid-template-columns: repeat(4, minmax(20px, 80px));
   max-width: var(--grid-max-width);
+  margin-bottom: var(--space-4xl);
 }
 
 /* Streg styling */
@@ -251,4 +252,16 @@ a {
 .streg_wrapper {
   overflow: hidden;
   height: fit-content;
+}
+
+@media (min-width: 810px) {
+  .section-grid,
+  .grid {
+    margin: auto;
+    padding: 1.5rem;
+    column-gap: var(--grid-gutter);
+    display: grid;
+    grid-template-columns: repeat(12, minmax(20px, 80px));
+    max-width: var(--grid-max-width);
+  }
 }

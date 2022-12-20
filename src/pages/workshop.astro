@@ -7,27 +7,32 @@ import UndersideCard from "../components/UndersideCard.astro";
 <Layout title="Workshop | A Circurlar Design Studio">
   <section class="section-grid">
     <h1>Workshop</h1>
-    <div class="tekst">
+    <div class="tekst_wrapper">
       <p>
         Vi mener at kreativitet og cirkulær økonomi går hånd i hånd, og det er
         en fantastisk sjov og lærerig måde at arbejde med bæredygtighed, selv at
-        få hænderne i maskineriet - selvfølgelig ikke bogstavelig talt! <br />Vi
-        har stor erfaring med at afholde workshops og undervisningsforløb, hvor
-        man selv får mulighed for at være med i processen og forhåbentlig kan
-        tage en god del inspiration og motivation med hjem.
+        få hænderne i maskineriet - selvfølgelig ikke bogstavelig talt!
+        <br />
+        <br />
+        Vi har stor erfaring med at afholde workshops og undervisningsforløb, hvor
+        man selv får mulighed for at være med i processen og forhåbentlig kan tage
+        en god del inspiration og motivation med hjem.
       </p>
+      <br />
       <p>
         Et eksempel på et tidligere undervisningsforløb, bestod i undervisning i
         cirkulær økonomi og bæredygtigt design for CBS og KADK studerende, men
         vi har samtidigt også haft forskellige virksomheder og institutioner på
-        besøg. Det du kan være sikker på er, at vi tilpasser altid vores
-        workshops afhængig af hvem der deltager. Du kan derfor besøge os som
-        uddannelsesinstitution eller som virksomhed - Vi skal nok sikre at
-        dagsordenen har relevans for jer.
+        besøg. <br /><br />
+        Det du kan være sikker på er, at vi tilpasser altid vores workshops afhængig
+        af hvem der deltager. Du kan derfor besøge os som uddannelsesinstitution
+        eller som virksomhed - Vi skal nok sikre at dagsordenen har relevans for
+        jer.
       </p>
     </div>
-    <div class="streg_wrapper streg"><Streg fill="var(--green)" /></div>
-    <div class="streg_wrapper lodret"><Streg fill="var(--blue)" /></div>
+    <div class="streg_wrapper streg"><Streg fill="var(--red)" /></div>
+  </section>
+  <section class="section-grid">
     <h2>Praktisk</h2>
     <div class="card">
       <UndersideCard
@@ -66,22 +71,56 @@ import UndersideCard from "../components/UndersideCard.astro";
 </Layout>
 
 <style>
-  .streg {
-    grid-column: 9/13;
-  }
-
-  .tekst {
-    display: flex;
-    grid-column: 1/13;
-    gap: var(--space-2xl);
-  }
-
+  h1,
+  .tekst_wrapper,
+  h2,
   .card {
-    margin-top: var(--space-2xl);
-    grid-column: 1/13;
-    grid-row: 4/5;
+    grid-column: 1/5;
+  }
+  h1,
+  h2 {
+    margin-bottom: var(--space-m);
+    color: var(--green);
+  }
+  .card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    gap: var(--space-m);
+    align-items: center;
+  }
+
+  .streg_wrapper {
+    visibility: hidden;
+  }
+
+  @media (min-width: 810px) {
+    .streg {
+      grid-column: 9/13;
+    }
+    .streg_wrapper {
+      visibility: visible;
+      padding-top: var(--space-2xl);
+    }
+    .main {
+      gap: var(--space-2xl);
+    }
+    .tekst_wrapper {
+      display: flex;
+      grid-column: 1/13;
+      gap: var(--space-2xl);
+    }
+
+    h2 {
+      grid-column: 1/13;
+    }
+
+    .card {
+      grid-column: 1/13;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: unset;
+    }
   }
 </style>
