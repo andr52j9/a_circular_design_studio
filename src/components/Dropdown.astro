@@ -1,14 +1,27 @@
 ---
-const { option1, option2, option3, option4, funktion } = Astro.props;
+const {
+  option1,
+  option2,
+  option3,
+  option4,
+  option5,
+  option6,
+  option7,
+  funktion,
+} = Astro.props;
 ---
 
 <div class="custom_select">
+  <h6>{funktion}</h6>
   <select name={funktion} aria-placeholder="Vælg">
     <option value="0">Vælg</option>
     <option value="1">{option1}</option>
     <option value="2">{option2}</option>
     <option value="3">{option3}</option>
     <option value="4">{option4}</option>
+    <option value="5">{option5}</option>
+    <option value="6">{option6}</option>
+    <option value="7">{option7}</option>
   </select>
 </div>
 
@@ -23,5 +36,6 @@ const { option1, option2, option3, option4, funktion } = Astro.props;
     background-repeat: no-repeat;
     background-position: center right;
     padding: var(--space-s) var(--space-m);
+    margin-top: var(--space-xs);
   }
 </style>
