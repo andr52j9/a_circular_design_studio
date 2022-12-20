@@ -18,21 +18,22 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
   </div>
 
   <div class="info">
-    <h2>{produktnavn}</h2>
+    <div>
+      <h2>{produktnavn}</h2>
 
-    <div class="e-jura">
-      <div class="flex">
-        <h6>14 dages fuld returret</h6>
-        <img class="check" src="/icons/Check.svg" alt="check_ikon" />
-      </div>
+      <div class="e-jura">
+        <div class="flex">
+          <h6>14 dages fuld returret</h6>
+          <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+        </div>
 
-      <div class="flex">
-        <h6>Håndlavede produkter</h6>
-        <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+        <div class="flex">
+          <h6>Håndlavede produkter</h6>
+          <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+        </div>
       </div>
     </div>
-
-    <div class="antal">
+    <div class="antalPris flex">
       <AntalButton
         tal="1"
         tekst="Antal"
@@ -41,28 +42,28 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
       />
       <h4>{pris}</h4>
     </div>
-    <div class="drop">
+    <div class="drop flex">
       <Dropdown
+        funktion="Farve"
         variant="primaryDropdown"
-        tekst="Farve"
-        tekst="Dragonfruit drizzle"
-        tekst="Cloudy Peach"
-        tekst="Kiwi Currents"
-        tekst="Plum Puddles"
-        tekst="Blueberry Blizzard"
-        tekst="Mango Haze"
-        tekst="Papaya Rainbows"
+        option1="Dragonfruit drizzle"
+        option2="Cloudy Peach"
+        option3="Kiwi Currents"
+        option4="Plum Puddles"
+        option5="Blueberry Blizzard"
+        option6="Mango Haze"
+        option7="Papaya Rainbows"
       />
       <Dropdown
+        funktion="Størrelse"
         variant="primaryDropdown"
-        tekst="Størrelse"
-        tekst="lille"
-        tekst="stor"
+        option1="lille"
+        option2="stor"
       />
     </div>
-
-    <Button class="knap" variant="secondary" tekst="Læg i kurv" />
-
+    <div class="knap">
+      <Button variant="secondary" tekst="Læg i kurv" />
+    </div>
     <p class="produktInfomation">
       {info}
     </p>
@@ -82,67 +83,97 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
         at få den ført igennem hurtigst muligt.
       </p>
     </div>
-    <!-- <Streg /> -->
+    <div class="streg_wrapper lodret"><Streg fill="var(--green-light)" /></div>
+
     <div>
       <h5>Leveringsomkostninger</h5>
       <p>
         Fragt koster 99 kroner i hele Danmark pr podie. Ved større bestillinger,
-        kan i kontakte os, både for betaling via faktura og samlet fragt. <br />
-
-        Du kan også vælge at afhente gratis i vores butik på Nørrebro i
-        København eller på vores værksted i Skovlunde.
+        kan i kontakte os, både for betaling via faktura og samlet fragt.
+        <br /> Du kan også vælge at afhente gratis i vores butik på Nørrebro i København
+        eller på vores værksted i Skovlunde.
       </p>
     </div>
   </div>
+
+  <style>
+    .billedeGalleri {
+      grid-column: 1/6;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-l);
+    }
+
+    h2,
+    .e-jura {
+      padding: 0;
+      margin: 0;
+    }
+
+    .img1 {
+      grid-column: 1/6;
+    }
+
+    .billedeGruppe {
+      grid-column: 1/6;
+      display: flex;
+      flex-direction: row;
+      gap: var(--space-m);
+    }
+
+    .info {
+      grid-column: 7/13;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+      justify-content: space-between;
+      padding: 0 0 var(--space-xl) 0;
+    }
+    .check {
+      width: var(--space-m);
+      height: var(--space-m);
+    }
+    .e-jura {
+      display: flex;
+      align-items: center;
+      gap: var(--space-l);
+      padding-top: var(--space-s);
+    }
+    .knap button {
+      display: flex;
+      width: 100%;
+    }
+    .flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-2xs);
+    }
+
+    .antalPris.flex,
+    .drop.flex {
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    h6 {
+      font-weight: var(--font-weight-light);
+      color: var(--text-color-medium);
+    }
+
+    .levering {
+      grid-column: 1/12;
+      display: flex;
+      gap: var(--space-l);
+      margin-top: var(--space-7xl);
+    }
+
+    .levering h5 {
+      margin-bottom: var(--space-xs);
+    }
+
+    .streg_wrapper {
+      place-self: center;
+    }
+  </style>
 </section>
-
-<style>
-  .billedeGalleri {
-    grid-column: 1/6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-l);
-  }
-
-  .img1 {
-    grid-column: 1/6;
-  }
-
-  .billedeGruppe {
-    grid-column: 1/6;
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-m);
-  }
-
-  .info {
-    grid-column: 7/13;
-  }
-  .check {
-    width: var(--space-m);
-    height: var(--space-m);
-  }
-  .e-jura {
-    display: flex;
-    align-items: center;
-    gap: var(--space-l);
-    padding-top: var(--space-m);
-  }
-
-  .flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-2xs);
-  }
-  h6 {
-    font-weight: var(--font-weight-light);
-    color: var(--text-color-medium);
-  }
-
-  .levering {
-    grid-column: 1/13;
-    display: flex;
-    gap: var(--space-l);
-  }
-</style>

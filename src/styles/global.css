@@ -243,6 +243,12 @@ a {
   max-width: var(--grid-max-width);
 }
 
+/* Streg styling */
 .lodret {
   rotate: 90deg;
+}
+
+.streg_wrapper {
+  overflow: hidden;
+  height: fit-content;
 }
