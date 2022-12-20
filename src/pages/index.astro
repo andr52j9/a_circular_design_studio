@@ -57,7 +57,7 @@ const { title } = Astro.props;
 
       <UndersideCard
         farve="yellow"
-        img="/img/regtangular.webp"
+        img="/img/regtangulaer.webp"
         underside="Webshop"
         link="produkter"
       />
@@ -152,7 +152,65 @@ const { title } = Astro.props;
       </div>
     </div>
   </section>
+
+  <!-- cookieboks -->
+  <div
+    id="newletter"
+    class="fixed top-0 grid hidden h-full w-screen bg-secondary bg-opacity-80"
+  >
+    <div
+      class="container grid h-2/3 w-1/2 justify-center place-self-center border-2 border-solid border-primary bg-white px-8"
+    >
+      <div
+        id="luk"
+        class="mt-6 cursor-pointer text-right text-3xl font-extralight text-secondary"
+      >
+        x
+      </div>
+      <p class="self-end text-3xl font-medium text-secondary">
+        Sign op til vores nyhedsbrev
+      </p>
+      <p class="text-6xl font-bold text-primary">20% på dit første køb</p>
+      <div class="flex gap-6 self-start">
+        <form class="" action="">
+          <input
+            class="w-96 border-2 border-primary"
+            type="text"
+            placeholder="Dinmail@mail.com"
+            name="mail"
+          />
+        </form>
+        <button
+          id="submit"
+          class="h-[44px] w-1/3 bg-primary font-bold uppercase text-white hover:border-2 hover:border-solid hover:border-primary hover:bg-white hover:text-primary"
+        >
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<script>
+  // cookieboks
+  const luk = document.querySelector("#luk");
+  const submit = document.querySelector("#submit");
+  const newsletterBoks = document.querySelector("#newletter");
+
+  window.setTimeout(timer, 10000);
+
+  function timer() {
+    console.log("timer i gang ");
+    newsletterBoks.classList.remove("hidden");
+    luk.addEventListener("click", lukNewsletter);
+    submit.addEventListener("click", lukNewsletter);
+  }
+
+  function lukNewsletter() {
+    console.log("click virker ");
+    newsletterBoks.classList.add("hidden");
+  }
+</script>
 
 <style>
   .insta {

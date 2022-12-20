@@ -59,7 +59,7 @@ p {
 }
 a {
   font-size: var(--font-size-m);
-  font-family: var(--font-family-body);
+  font-family: var(--font-family-nav);
   text-decoration: none;
 }
 
