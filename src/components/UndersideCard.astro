@@ -1,15 +1,44 @@
 ---
-const { underside, img, farve, link } = Astro.props;
+const { underside, img, farve, link, tekst, variant } = Astro.props;
 ---
 
-<a href={link}>
+<a data-variant={variant} href={link}>
   <div class="card_wrapper">
     <img src={img} alt={underside} />
-    <div class={`text_wrapper ${farve}`}><h4>{underside}</h4></div>
+    <div class={`text_wrapper ${farve}`}>
+      <h4>{underside}</h4>
+      <p>{tekst}</p>
+    </div>
   </div>
 </a>
 <style>
+  [data-variant="secondary"] .card_wrapper:hover .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-left: var(--space-l);
+    padding-bottom: var(--space-m);
+    padding-right: var(--space-l);
+    width: 236px;
+    height: 414px;
+  }
+  p {
+    color: var(--white);
+    font-size: var(--step-0);
+  }
+  [data-variant="secondary"] .card_wrapper:hover p {
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .card_wrapper p {
+    display: none;
+  }
   .card_wrapper {
+    overflow: hidden;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -56,5 +85,9 @@ const { underside, img, farve, link } = Astro.props;
 
   .yellow {
     background-color: var(--yellow);
+  }
+
+  .red {
+    background-color: var(--red);
   }
 </style>

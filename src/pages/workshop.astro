@@ -1,7 +1,86 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Streg from "../components/Streg.astro";
+import UndersideCard from "../components/UndersideCard.astro";
 ---
 
 <Layout title="Workshop | A Circurlar Design Studio">
-  <h1>Workshop</h1>
+  <section class="section-grid">
+    <h1>Workshop</h1>
+    <div class="tekst">
+      <p>
+        Vi mener at kreativitet og cirkulær økonomi går hånd i hånd, og det er
+        en fantastisk sjov og lærerig måde at arbejde med bæredygtighed, selv at
+        få hænderne i maskineriet - selvfølgelig ikke bogstavelig talt! <br />Vi
+        har stor erfaring med at afholde workshops og undervisningsforløb, hvor
+        man selv får mulighed for at være med i processen og forhåbentlig kan
+        tage en god del inspiration og motivation med hjem.
+      </p>
+      <p>
+        Et eksempel på et tidligere undervisningsforløb, bestod i undervisning i
+        cirkulær økonomi og bæredygtigt design for CBS og KADK studerende, men
+        vi har samtidigt også haft forskellige virksomheder og institutioner på
+        besøg. Det du kan være sikker på er, at vi tilpasser altid vores
+        workshops afhængig af hvem der deltager. Du kan derfor besøge os som
+        uddannelsesinstitution eller som virksomhed - Vi skal nok sikre at
+        dagsordenen har relevans for jer.
+      </p>
+    </div>
+    <div class="streg_wrapper streg"><Streg fill="var(--green)" /></div>
+    <h2>Praktisk</h2>
+    <div class="card">
+      <UndersideCard
+        farve="yellow"
+        img="/img/hammer.webp"
+        underside="Hvor?"
+        tekst="Maskinerne er bygget, så de kan tages med og vi kan derfor både komme ud til jer, men i har også mulighed for at besøge vores værksted i Skovlunde"
+        variant="secondary"
+      />
+
+      <UndersideCard
+        farve="blue"
+        img="/img/spatel.webp"
+        underside="Hvad"
+        tekst="Workshops og undervisningsforløb vil være en kombination af oplæg og praktisk brug af vores maskiner."
+        variant="secondary"
+      />
+
+      <UndersideCard
+        farve="green"
+        img="/img/borste.webp"
+        underside="Hvem?"
+        tekst="Hvem som helst kan være med, dog er minimums alderen 10 år og børn skal desuden være i følgeskab med voksne"
+        variant="secondary"
+      />
+
+      <UndersideCard
+        farve="red"
+        img="/img/malerrulle.webp"
+        underside="hvornår"
+        tekst="Et forløb kan vare 4 timer eller flere uger, det er meget op til jer, hvilket behov og fokus i gerne vil have ud af forløbet og selvfølgelig hvor stor en klasse i har med."
+        variant="secondary"
+      />
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .streg {
+    grid-column: 9/13;
+  }
+
+  .tekst {
+    display: flex;
+    grid-column: 1/13;
+    gap: var(--space-2xl);
+  }
+
+  .card {
+    margin-top: var(--space-2xl);
+    grid-column: 1/13;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+</style>
