@@ -2,13 +2,14 @@
 import AntalButton from "../components/AntalButton.astro";
 import Dropdown from "../components/Dropdown.astro";
 import Button from "../components/Button.astro";
+import Streg from "../components/Streg.astro";
 const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
   Astro.props;
 ---
 
-<section class="section_grid">
+<section class="section-grid">
   <div class="billedeGalleri">
-    <img class="img1" src={billede1} alt="stor_cubes" />
+    <img class="img1" src={billede1} alt="billede af stacks the lamp" />
     <div class="billedeGruppe">
       <img class="img2" src={billede2} alt="lampe1" />
       <img class="img3" src={billede3} alt="lampe2" />
@@ -20,10 +21,15 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
     <h2>{produktnavn}</h2>
 
     <div class="e-jura">
-      <img class="check" src="/icons/Check.svg" alt="check_ikon" />
-      <h6>14 dages fuld returret</h6>
-      <img class="check" src="/icons/Check.svg" alt="check_ikon" />
-      <h6>håndlavede produkter</h6>
+      <div class="flex">
+        <h6>14 dages fuld returret</h6>
+        <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+      </div>
+
+      <div class="flex">
+        <h6>Håndlavede produkter</h6>
+        <img class="check" src="/icons/Check.svg" alt="check_ikon" />
+      </div>
     </div>
 
     <div class="antal">
@@ -61,9 +67,57 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
       {info}
     </p>
   </div>
+
+  <div class="levering">
+    <div>
+      <h5>Leveringstid</h5>
+      <p>
+        Alle vores produkter er håndlavede, hvilket betyder vi producerer
+        produkterne løbende, når de bestilles. <br />
+
+        Derfor vil der være ca 3-4 ugers levering, afhængig af størrelsen på
+        ordren. <br />
+
+        Hvis ordren haster, er i velkomne til at kontakte os, så skal vi prøve
+        at få den ført igennem hurtigst muligt.
+      </p>
+    </div>
+    <!-- <Streg /> -->
+    <div>
+      <h5>Leveringsomkostninger</h5>
+      <p>
+        Fragt koster 99 kroner i hele Danmark pr podie. Ved større bestillinger,
+        kan i kontakte os, både for betaling via faktura og samlet fragt. <br />
+
+        Du kan også vælge at afhente gratis i vores butik på Nørrebro i
+        København eller på vores værksted i Skovlunde.
+      </p>
+    </div>
+  </div>
 </section>
 
 <style>
+  .billedeGalleri {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-l);
+  }
+
+  .img1 {
+    grid-column: 1/6;
+  }
+
+  .billedeGruppe {
+    grid-column: 1/6;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-m);
+  }
+
+  .info {
+    grid-column: 7/13;
+  }
   .check {
     width: var(--space-m);
     height: var(--space-m);
@@ -71,10 +125,24 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
   .e-jura {
     display: flex;
     align-items: center;
+    gap: var(--space-l);
     padding-top: var(--space-m);
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2xs);
   }
   h6 {
     font-weight: var(--font-weight-light);
     color: var(--text-color-medium);
+  }
+
+  .levering {
+    grid-column: 1/13;
+    display: flex;
+    gap: var(--space-l);
   }
 </style>

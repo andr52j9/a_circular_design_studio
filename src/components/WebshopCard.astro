@@ -1,5 +1,5 @@
 ---
-const { img, produktnavn, prisfra, pris, link } = Astro.props;
+const { img, produktnavn, pris, link } = Astro.props;
 import Button from "./Button.astro";
 ---
 
@@ -14,7 +14,7 @@ import Button from "./Button.astro";
     <div class="text_wrapper">
       <h4 class="produktnavn">{produktnavn}</h4>
       <div class="pris">
-        <h6 class="prisFra">{prisfra}</h6>
+        <h6 class="prisFra">pris fra</h6>
         <h5>{pris}</h5>
       </div>
     </div>
