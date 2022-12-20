@@ -1,64 +1,68 @@
 ---
-const { img, navn, titel, beskrivelse, laesMere, kontakt, mail } = Astro.props;
+const { img, navn, titel, beskrivelse, laesMere, kontakt, mail, variant } =
+  Astro.props;
 ---
 
-<article class="article_wrapper">
-    <img src={img} alt="temaet bag">
-    <div class="text_wrapper">
-        <h3>{navn}</h3>
-        <h6 class="titel">{titel}</h6>
-        <p class="beskrivelse">{beskrivelse}</p>
-        <div class="underline_laesmere">
-        <h5 class="laesmere">{laesMere}</h5>
+<article data-variant={variant} class="article_wrapper">
+  <img src={img} alt="temaet bag" />
+  <div class="text_wrapper">
+    <h3>{navn}</h3>
+    <h6 class="titel">{titel}</h6>
+    <p class="beskrivelse">{beskrivelse}</p>
+    <div class="underline_laesmere">
+      <h5 class="laesmere">{laesMere}</h5>
     </div>
-        <div class="kontakt_wrapper">
-            <h6 class="kontakt">{kontakt}</h6>
-            <a href={mail}><h6 class="mail">{mail}</h6></a>
-        </div>
+    <div class="kontakt_wrapper">
+      <h6 class="kontakt">{kontakt}</h6>
+      <a href={mail}><h6 class="mail">{mail}</h6></a>
     </div>
+  </div>
 </article>
 
 <style>
-     img {
+  [data-variant="primary"] img {
+    order: 2;
+  }
+  img {
     max-width: 550px;
     max-height: 580px;
-    }
+  }
 
-    .article_wrapper {
-        display: flex;
-        gap: 110px;
-    }
-
-    .text_wrapper {
-      display: grid;
-      height: fit-content;
-    }
-
-    h3 {
-        color: var(--yellow);
-        font-weight: var(--font-weight-regular);
-    }
-
-    .titel {
-        padding-top: var(--space-xs);
-        padding-bottom: var( --space-m);
-        font-weight: var( --font-weight-light);
-        color: var( --color-greyscale-400);
-    }
-
-.underline_laesmere {
+  .article_wrapper {
     display: flex;
-	justify-content: flex-end;
-}
+    gap: 110px;
+  }
 
-    .laesmere {
-        padding-top: var(--space-xl);
-        padding-bottom: var(--space-2xl);
-        font-weight: var(--font-weight-regular);
-        color: var( --color-greyscale-400);
-    }
+  .text_wrapper {
+    display: grid;
+    height: fit-content;
+  }
 
-    .laesmere::after {
+  h3 {
+    color: var(--yellow);
+    font-weight: var(--font-weight-regular);
+  }
+
+  .titel {
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-m);
+    font-weight: var(--font-weight-light);
+    color: var(--color-greyscale-400);
+  }
+
+  .underline_laesmere {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .laesmere {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-2xl);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-greyscale-400);
+  }
+
+  .laesmere::after {
     content: "";
     display: block;
     margin-top: var(--space-2xs);
@@ -67,20 +71,19 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail } = Astro.props;
     background-color: var(--yellow);
     transition: all 0.3s;
     width: 100%;
-    }
+  }
 
-    .kontakt {
-        font-weight: var(--font-weight-light);
-        color: var( --color-greyscale-400);
-    }
+  .kontakt {
+    font-weight: var(--font-weight-light);
+    color: var(--color-greyscale-400);
+  }
 
-    .mail {
-        color: var(--yellow);
-    }
+  .mail {
+    color: var(--yellow);
+  }
 
-    .kontakt_wrapper {
-        display: flex;
-        gap: var(--space-3xs);
-    }
-
+  .kontakt_wrapper {
+    display: flex;
+    gap: var(--space-3xs);
+  }
 </style>
