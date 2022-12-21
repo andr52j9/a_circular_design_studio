@@ -32,8 +32,7 @@ const { title } = Astro.props;
         </a>
       </div>
     </div>
-
-    <Cirkel />
+    <div class="cirkel"><Cirkel /></div>
   </section>
 
   <section class="section2 section-grid">
@@ -287,6 +286,11 @@ const { title } = Astro.props;
     }
 
     @media (min-width: 810px) {
+      .cirkel {
+        width: 262px;
+        place-content: start;
+      }
+
       .section-grid {
         margin-bottom: var(--space-10xl);
       }
