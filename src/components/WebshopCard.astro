@@ -1,12 +1,12 @@
 ---
-const { img, produktnavn, pris, link } = Astro.props;
+const { img, produktnavn, pris, link, alt } = Astro.props;
 import Button from "./Button.astro";
 ---
 
 <a href={link} class="wrapper">
   <article class="card_wrapper">
     <div class="container">
-      <img src={img} alt={produktnavn} />
+      <img src={img} alt={alt} />
       <div class="overlay">
         <Button variant="overlay" tekst="Se produkt" />
       </div>
@@ -22,8 +22,9 @@ import Button from "./Button.astro";
 </a>
 
 <style>
-  .wrapper {
+  .card_wrapper {
     display: flex;
+    flex-direction: column;
   }
 
   .container {

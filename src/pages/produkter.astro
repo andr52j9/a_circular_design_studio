@@ -4,7 +4,7 @@ import WebshopCard from "../components/WebshopCard.astro";
 ---
 
 <Layout title="Køb Produkter | A Circurlar Design Studio">
-  <div class="grid">
+  <div class="section-grid">
     <h1>Køb produkter</h1>
     <div class="cards_wrapper">
       <WebshopCard
@@ -19,7 +19,7 @@ import WebshopCard from "../components/WebshopCard.astro";
         link="cubes-podium"
         produktnavn="Cubes | Podium"
         pris="kr 2.795,00"
-        img="./img/cubes.webp"
+        img="/img/cubes.webp"
         alt="cubes"
       />
 
@@ -83,17 +83,28 @@ import WebshopCard from "../components/WebshopCard.astro";
 
 <style>
   h1 {
-    grid-column: 1/13;
+    grid-column: 1/5;
     color: var(--blue-light);
   }
   .cards_wrapper {
-    grid-column: 1/13;
-    place-items: center;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
+    grid-column: 1/5;
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2xl);
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--space-xl);
     justify-content: space-between;
+  }
+
+  @media (min-width: 810px) {
+    h1 {
+      grid-column: 1/13;
+    }
+    .cards_wrapper {
+      grid-column: 1/13;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--space-m);
+    }
   }
 </style>
