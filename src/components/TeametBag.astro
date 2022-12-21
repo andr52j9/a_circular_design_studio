@@ -20,17 +20,16 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail, variant } =
 </article>
 
 <style>
-  [data-variant="primary"] img {
-    order: 2;
-  }
   img {
     max-width: 550px;
     max-height: 580px;
+    object-fit: cover;
   }
 
   .article_wrapper {
     display: flex;
-    gap: 110px;
+    flex-direction: column;
+    gap: var(--space-xl);
   }
 
   .text_wrapper {
@@ -56,10 +55,12 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail, variant } =
   }
 
   .laesmere {
-    padding-top: var(--space-xl);
-    padding-bottom: var(--space-2xl);
-    font-weight: var(--font-weight-regular);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-4xl);
+    font-stretch: normal;
+    font-weight: var(--font-weight-light);
     color: var(--color-greyscale-400);
+    letter-spacing: var(--letter-spacing-double);
   }
 
   .laesmere::after {
@@ -67,7 +68,7 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail, variant } =
     display: block;
     margin-top: var(--space-2xs);
     height: 3px;
-    top: 5px;
+    top: var(--space-3xs);
     background-color: var(--yellow);
     transition: all 0.3s;
     width: 100%;
@@ -91,7 +92,11 @@ const { img, navn, titel, beskrivelse, laesMere, kontakt, mail, variant } =
     .article_wrapper {
       display: flex;
       flex-direction: row;
-      gap: 110px;
+      gap: var(--space-4xl);
+    }
+
+    [data-variant="primary"] img {
+      order: 2;
     }
   }
 </style>
