@@ -20,7 +20,13 @@ const { title } = Astro.props;
         interiør, installationer og kunstværker, i 100% genanvendt plast,
         indsamlet fra husholdninger, naturen eller virksomheder i Danmark.
       </p>
+      <br />
+      <p>Bliv klogere omkring cirkulær økonomi.</p>
+      <div class="CTA">
+        <Button variant="primary" tekst="TILMELD WORKSHOP" />
+      </div>
     </div>
+
     <Cirkel />
   </section>
 
@@ -155,6 +161,10 @@ const { title } = Astro.props;
   </section>
 
   <style>
+    .CTA {
+      padding-top: var(--space-2xl);
+      padding-left: var(--space-7xl);
+    }
     .insta {
       margin-bottom: var(--space-s);
     }
