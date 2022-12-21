@@ -20,7 +20,7 @@ h1 {
   font-size: var(--font-size-4xl);
   font-stretch: condensed;
   margin-top: var(--space-l);
-  margin-bottom: var(--space-xl);
+
   letter-spacing: var(--letter-spacing-heading);
   text-transform: uppercase;
 }
