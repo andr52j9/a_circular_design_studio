@@ -1,8 +1,10 @@
 ---
-const { tekst, variant } = Astro.props;
+const { tekst, variant, link } = Astro.props;
 ---
 
-<button data-variant={variant}><h4 class="button_tekst">{tekst}</h4></button>
+<a href={link}
+  ><button data-variant={variant}><h4 class="button_tekst">{tekst}</h4></button>
+</a>
 
 <style>
   /* generelt knap */
