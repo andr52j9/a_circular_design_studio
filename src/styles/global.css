@@ -245,7 +245,6 @@ a {
   grid-template-columns: repeat(4, 1fr);
   max-width: var(--grid-max-width);
   margin-bottom: var(--space-4xl);
-  justify-content: center;
 }
 
 /* Streg styling */
@@ -268,7 +267,6 @@ a {
     display: grid;
     grid-template-columns: repeat(12, minmax(20px, 80px));
     max-width: var(--grid-max-width);
-    justify-content: unset;
   }
   .streg_wrapper {
     display: block;
