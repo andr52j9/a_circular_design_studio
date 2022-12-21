@@ -1,7 +1,6 @@
 ---
 import NavPunkt from "./Nav_punkt.astro";
 import Kurv from "./Kurv.astro";
-import BurgermenuIcon from "./BurgermenuIcon.astro";
 ---
 
 <header>
@@ -11,7 +10,28 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
       <Kurv />
     </div>
     <div class="burgermenuIcon">
-      <BurgermenuIcon />
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 16H27"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M5 7.99951H27"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M5 23.9995H27"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
     </div>
     <nav class="hide">
       <ul>
@@ -177,6 +197,14 @@ import BurgermenuIcon from "./BurgermenuIcon.astro";
   }
   .hide {
     display: none;
+  }
+
+  svg {
+    width: 32px;
+    stroke: var(--kurv-color);
+  }
+  svg:hover {
+    stroke: var(--kurv-color-hover);
   }
   @media (min-width: 810px) {
     .logo_header {
