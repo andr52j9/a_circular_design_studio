@@ -84,7 +84,7 @@
   --space-10xl: clamp(10.5rem, calc(10.16rem + 1.7vw), 12rem);
 
   /* font family */
-  --font-family-body: "open sans", serif;
+  --font-family-body: "Open sans", Helvetica, serif;
   --font-family-headings: "Helvetica Neue", Helvetica, serif;
   --font-family-nav: "Helvetica Neue", Helvetica, serif;
 

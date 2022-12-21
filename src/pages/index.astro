@@ -192,7 +192,7 @@ const { title } = Astro.props;
     }
 
     .splash_text {
-      grid-column: span 7;
+      grid-column: 1/5;
       align-self: center;
       display: flex;
       flex-direction: column;
@@ -207,7 +207,7 @@ const { title } = Astro.props;
     }
     .CTA {
       padding-top: var(--space-l);
-      justify-content: flex-end;
+      justify-content: center;
       display: flex;
     }
 
@@ -286,9 +286,15 @@ const { title } = Astro.props;
     }
 
     @media (min-width: 810px) {
-      .cirkel {
-        width: 262px;
-        place-content: start;
+      .splash_text {
+        grid-column: span 7;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+      }
+      .CTA {
+        justify-content: flex-end;
       }
 
       .section-grid {

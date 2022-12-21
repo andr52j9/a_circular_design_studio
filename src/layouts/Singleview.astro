@@ -33,7 +33,7 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
         </div>
       </div>
     </div>
-    <div class="antalPris flex">
+    <div class="antalPris">
       <AntalButton
         tal="1"
         tekst="Antal"
@@ -42,7 +42,7 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
       />
       <h4>{pris}</h4>
     </div>
-    <div class="drop flex">
+    <div class="drop">
       <Dropdown
         funktion="Farve"
         variant="primaryDropdown"
@@ -98,16 +98,26 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
 
   <style>
     .billedeGalleri {
-      grid-column: 1/6;
+      grid-column: 1/5;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-l);
+      margin-bottom: var(--space-l);
     }
 
     h2,
     .e-jura {
       padding: 0;
       margin: 0;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-2xs);
+      flex-wrap: nowrap;
+      justify-content: space-between;
     }
 
     .img1 {
@@ -123,7 +133,7 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
     }
 
     .info {
-      grid-column: 7/13;
+      grid-column: 1/5;
       display: flex;
       flex-direction: column;
       gap: var(--space-m);
@@ -144,27 +154,29 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
       display: flex;
       width: 100%;
     }
-    .flex {
+
+    .antalPris {
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: var(--space-2xs);
-    }
-
-    .antalPris.flex,
-    .drop.flex {
       align-items: flex-end;
       justify-content: space-between;
     }
 
+    .drop {
+      display: flex;
+      flex-direction: column;
+    }
     h6 {
       font-weight: var(--font-weight-light);
       color: var(--text-color-medium);
     }
 
     .levering {
-      grid-column: 1/12;
+      grid-column: 1/5;
       display: flex;
+      flex-direction: column;
       gap: var(--space-l);
       margin-top: var(--space-7xl);
     }
@@ -175,6 +187,29 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
 
     .streg_wrapper {
       place-self: center;
+    }
+
+    @media (min-width: 810px) {
+      .billedeGalleri {
+        grid-column: 1/6;
+      }
+      .info {
+        grid-column: 7/13;
+      }
+
+      .levering {
+        flex-direction: row;
+        grid-column: 1/12;
+      }
+
+      .drop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-2xs);
+        align-items: flex-end;
+        justify-content: space-between;
+      }
     }
   </style>
 </section>
