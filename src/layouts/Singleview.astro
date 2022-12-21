@@ -33,7 +33,7 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
         </div>
       </div>
     </div>
-    <div class="antalPris flex">
+    <div class="antalPris">
       <AntalButton
         tal="1"
         tekst="Antal"
@@ -42,7 +42,7 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
       />
       <h4>{pris}</h4>
     </div>
-    <div class="drop flex">
+    <div class="drop">
       <Dropdown
         funktion="Farve"
         variant="primaryDropdown"
@@ -109,6 +109,15 @@ const { billede1, billede2, billede3, billede4, produktnavn, pris, info } =
     .e-jura {
       padding: 0;
       margin: 0;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-2xs);
+
+      justify-content: space-between;
     }
 
     .img1 {
