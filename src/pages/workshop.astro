@@ -35,41 +35,45 @@ import UndersideCard from "../components/UndersideCard.astro";
   <section class="section-grid">
     <h2>Praktisk</h2>
     <div class="card">
-      <UndersideCard
-        farve="green"
-        img="/img/hammer.webp"
-        alt="borste"
-        underside="Hvem?"
-        tekst="Hvem som helst kan være med, dog er minimums alderen 10 år og børn skal desuden være i følgeskab med voksne"
-        variant="secondary"
-      />
-
-      <UndersideCard
-        farve="blue"
-        img="/img/spatel.webp"
-        alt="spatel"
-        underside="Hvad"
-        tekst="Workshops og undervisningsforløb vil være en kombination af oplæg og praktisk brug af vores maskiner."
-        variant="secondary"
-      />
-
-      <UndersideCard
-        farve="yellow"
-        img="/img/borste.webp"
-        alt="hammer"
-        underside="Hvor?"
-        tekst="Maskinerne er bygget, så de kan tages med og vi kan derfor både komme ud til jer, men i har også mulighed for at besøge vores værksted i Skovlunde"
-        variant="secondary"
-      />
-
-      <UndersideCard
-        farve="red"
-        img="/img/malerrulle.webp"
-        alt="malerrulle"
-        underside="hvornår"
-        tekst="Et forløb kan vare 4 timer eller flere uger, det er meget op til jer, hvilket behov og fokus i gerne vil have ud af forløbet og selvfølgelig hvor stor en klasse i har med."
-        variant="secondary"
-      />
+      <div>
+        <UndersideCard
+          farve="green"
+          img="/img/hammer.webp"
+          alt="borste"
+          underside="Hvem?"
+          tekst="Hvem som helst kan være med, dog er minimums alderen 10 år og børn skal desuden være i følgeskab med voksne"
+          variant="secondary"
+        />
+      </div>
+      <div>
+        <UndersideCard
+          farve="blue"
+          img="/img/spatel.webp"
+          alt="spatel"
+          underside="Hvad"
+          tekst="Workshops og undervisningsforløb vil være en kombination af oplæg og praktisk brug af vores maskiner."
+          variant="secondary"
+        />
+      </div><div>
+        <UndersideCard
+          farve="yellow"
+          img="/img/borste.webp"
+          alt="hammer"
+          underside="Hvor?"
+          tekst="Maskinerne er bygget, så de kan tages med og vi kan derfor både komme ud til jer, men i har også mulighed for at besøge vores værksted i Skovlunde"
+          variant="secondary"
+        />
+      </div>
+      <div>
+        <UndersideCard
+          farve="red"
+          img="/img/malerrulle.webp"
+          alt="malerrulle"
+          underside="hvornår"
+          tekst="Et forløb kan vare 4 timer eller flere uger, det er meget op til jer, hvilket behov og fokus i gerne vil have ud af forløbet og selvfølgelig hvor stor en klasse i har med."
+          variant="secondary"
+        />
+      </div>
     </div>
   </section>
 </Layout>
@@ -86,6 +90,15 @@ import UndersideCard from "../components/UndersideCard.astro";
     margin-bottom: var(--space-m);
     color: var(--green);
   }
+  /* .card {
+    margin-top: var(--space-2xl);
+    grid-column: 1/5;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--space-m);
+  } */
   .card {
     display: flex;
     flex-direction: column;
@@ -93,7 +106,6 @@ import UndersideCard from "../components/UndersideCard.astro";
     gap: var(--space-m);
     align-items: center;
   }
-
   .streg_wrapper {
     visibility: hidden;
   }
